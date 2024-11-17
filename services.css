@@ -1,0 +1,17 @@
+section {
+    padding: 90px 20px; /* Add space inside each section */
+    margin: 0 auto; /* Center the content */
+}
+
+section + section {
+    margin-top: 50px; /* Add space between adjacent sections */
+}
+section {
+    min-height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    position: relative; /* Ensures stacking context */
+    /* z-index: 1; */
+}

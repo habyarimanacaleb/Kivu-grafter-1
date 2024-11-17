@@ -14,7 +14,8 @@
     />
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet" href="./services.css" />
-    <link rel="stylesheet" href="./Button.css">
+    <link rel="stylesheet" href="./Button.css" />
+    <link rel="stylesheet" href="./animation.css">
   </head>
   <body>
     <nav>
@@ -23,7 +24,7 @@
           <h1 class="Logo-name">Kivu</h1>
           <p class="Logo-description">Grafter</p>
         </div>
-        <div class="app-nav-links">
+        <div class="app-nav-links" id="nav-links">
           <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -31,7 +32,7 @@
             <li><a href="#testimonial">Testimonials</a></li>
           </ul>
         </div>
-        <div class="app-menu-icon" title="Menu">
+        <div class="app-menu-icon" id="menu-toggle" title="Menu">
           <button></button>
           <button></button>
           <button></button>
@@ -56,27 +57,33 @@
       <div class="my-quote mt-12">
         <p
           class="text-center text-3xl text-bold"
-          style="text-transform: capitalize; margin-top: 100px"
+          style="text-transform: capitalize;"
         >
           We Travel in Comfort
         </p>
       </div>
     </section>
-    <section class="about text-center  justify-center mx-auto" style=" max-width: 860px;" id="about">
+    <section
+      class="about fade-in text-center justify-center mx-auto"
+      style="max-width: 860px"
+      id="about"
+    >
       <h1 class="text-5xl text-center">About</h1>
       <p class="text-center">
         Welcome to IBIRWA AFRICAN LAKE TOURS, your ultimate travel partner for
-        an unforgettable adventure in Rwanda. We offer a wide range of services
-        including boat trips, kayaking, biking, accommodation rentals, Congo
-        Nile trail hiking and biking, night fishing experience, coffee and tea
-        factory experiences, as well as local cultural and geographical tours.
-        Let us take you on a journey of a lifetime and discover the beauty of
-        Rwanda with us.
+        an unforgettable adventure in Rwanda.
+      </p>
+      <p class="text-center">
+        We offer a wide range of services including boat trips, kayaking,
+        biking, accommodation rentals, Congo Nile trail hiking and biking, night
+        fishing experience, coffee and tea factory experiences, as well as local
+        cultural and geographical tours. Let us take you on a journey of a
+        lifetime and discover the beauty of Rwanda with us.
       </p>
       <button class="btn">Learn More</button>
     </section>
-    <section class="service" id="service">
-        <h1 class="text-center text-5xl">Our Experience</h1>
+    <section class="service fade-in" id="service">
+      <h1 class="headings text-center text-5xl">Our Experience</h1>
       <div
         class="service-container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 py-10 px-5"
       >
@@ -85,13 +92,30 @@
     </section>
 
     <script>
-      // Toggle mobile navigation
-      const menuIcon = document.querySelector(".app-menu-icon");
-      const navLinks = document.querySelector(".app-nav-links");
-      menuIcon.addEventListener("click", () => {
-        navLinks.classList.toggle("hidden");
-      });
+const menuToggle = document.getElementById('menu-toggle');
+const navLinks = document.getElementById('nav-links');
+const navLinkItems = document.querySelectorAll('.app-nav-links ul li a');
+const body = document.body;
+const section = document.section;
+
+// Toggle the menu visibility
+menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    body.classList.toggle('no-scroll');
+    section.style.opacity = 0.4;
+});
+
+// Close the menu when clicking any link
+navLinkItems.forEach((link) => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        body.classList.remove('no-scroll');
+        section.style.opacity = 1;
+    });
+});
+
     </script>
     <script src="./main.js"></script>
+    <script src="./animation.js"></script>
   </body>
 </html>

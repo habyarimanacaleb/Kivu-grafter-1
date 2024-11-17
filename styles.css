@@ -1,171 +1,207 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
-    font-weight: 800;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+body {
+  font-weight: 800;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-.app-nav{
-    background-color: rgba(25, 199, 242);
-    opacity: 1;
-    z-index: 1;
-    padding-bottom: 20px;
-    display: flex;
-    position: fixed;
-    width: 100%;
-    align-items: center;
-    justify-content: space-around;
-    border-bottom: 2px solid gray;
-    padding: 8px;
-    height: 12%;
+.app-nav {
+  background-color: rgba(25, 199, 242);
+  opacity: 1;
+  z-index: 1;
+  padding-bottom: 20px;
+  display: flex;
+  position: fixed;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 2px solid gray;
+  padding: 8px;
+  height: 12%;
 }
-.app-nav-links ul{
+.app-nav-links ul {
   display: flex;
   place-items: center;
   list-style-type: none;
- 
 }
-.app-logo h1{
-    font-size: 40px;
+.app-logo h1 {
+  font-size: 40px;
 }
-.app-logo p{
-    font-size: 18px;
-    font-weight: 600;
+.app-logo p {
+  font-size: 18px;
+  font-weight: 600;
 }
-.app-nav-links ul li{
-    padding-right: 20px;
+.app-nav-links ul li {
+  padding-right: 20px;
 }
-.app-nav-links ul li a{
-text-decoration: none;
-font-size: x-large;
+.app-nav-links ul li a {
+  text-decoration: none;
+  font-size: x-large;
 }
-.app-nav-links ul li a:hover{
-color: rgb(100, 102, 139);
+.app-nav-links ul li a:hover {
+  color: rgb(100, 102, 139);
 }
-.app-nav-links ul li a:focus{
-color: rgb(0, 102, 139,.95);
+.app-nav-links ul li a:focus {
+  color: rgb(0, 102, 139, 0.95);
 }
-
-.app-menu-icon{
-    display: flex;
-    flex-direction: column;
-    transition: transform 1s ease;
-    place-items: center;
+.app-menu-icon {
+  display: flex;
+  flex-direction: column;
+  transition: transform 1s ease;
+  place-items: center;
 }
-.app-menu-icon button{
-    background-color: black;
-    width: 40px;
-    padding: 1px;
-    border-radius: 10px;
-    margin-bottom: 10px;
+.app-menu-icon button {
+  background-color: black;
+  width: 40px;
+  padding: 1px;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
-.app-menu-icon:hover{
-   transform: translateY(-1.5px) scale(1.1);
+.app-menu-icon:hover {
+  transform: translateY(-1.5px) scale(1.1);
 }
-
 #home {
-    height: 100vh;
-    padding-top: 100px;
-    font-family: monospace, Arial;
-    background-image: url('./kivu-image/bg-2.jpg');
-    background-position: center;
-    background-attachment: fixed; 
-    background-repeat: no-repeat;
-    background-size: cover;
+  height: 100vh;
+  padding-top: 120px;
+  font-family: monospace, Arial;
+  background-image: url("./kivu-image/bg-2.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.hello{
-    padding-top: 50px;
-}
-.welcome-page h1{
+.welcome-page h1 {
   text-transform: uppercase;
 }
-.app-menu-icon{
-    display: none;
+.app-menu-icon {
+  display: none;
 }
-
-.home-bind span{
-    font-size: 20px;
-}
-
-.home-bind span::before{
-    content: "‖";
-}
-
-@media screen and (max-width:786px)
- {
-    .app-nav{
-        padding-bottom: 20px;
-    }
-   .app-nav-links{
-    display: none;
-    justify-content: space-between;
-   } 
-   .app-menu-icon{
-    display: flex;
-   }
-
-   .hello{
-    padding-top: 50px;
-}
-.welcome-page h1{
+.home-bind span {
   font-size: 20px;
 }
-.welcome-page h4{
-    margin-top: 5px;
-  font-size: 20px;
+.home-bind span::before {
+  content: "‖";
 }
-.home-bind span{
-    font-size: 12px;
+.my-quote {
+  margin-top: 200px;
 }
-.my-quote{
-    margin-top: 200px;
-}
-.my-quote p{
-font-size: 18px;
-}
-}
-
 /* about section*/
-.about,.service{
-    height: 100vh;
-    padding-top: 100px;
+.about p {
+  font-size: 2rem;
+  font-weight: 400;
+  font-family: serif;
+  color: #333;
+  line-height: 1.5;
+  text-align: justify;
+  margin: 20px;
 }
+@media screen and (max-width: 786px) {
+  .app-menu-icon {
+    display: flex;
+  }
+  .app-nav {
+    padding-bottom: 20px;
+  }
 
-.about p{
-        font-size: 2rem; 
-        font-weight: 400;
-        font-family: serif; 
-        color: #333; 
-        line-height: 1.8; 
-        text-align: justify; 
-        margin: 20px; 
-}
-
-
-@media screen and (max-width:1200px)
- {
-    .app-nav{
-        padding-bottom: 20px;
-    }
-.welcome-page h1{
-  font-size: 60px;
-}
-.welcome-page h4{
+  .welcome-page h4 {
     margin-top: 5px;
-  font-size: 35px;
+    font-size: 2rem; /* Adjust h4 size */
+  }
+  .home-bind span {
+    font-size: 12px;
+  }
+  .my-quote p {
+    font-size: 18px;
+    text-justify: 1.3;
+  }
+  .headings {
+    font-size: 2.1rem;
+  }
+  .about p {
+    line-height: 1.4;
+    font-size: 1.3rem;
+  }
+  section {
+    padding: 40px 10px;
+  }
+  #home .hello h1 {
+    font-size: 4rem; /* Adjust h1 size for medium screens */
+  }
 }
-.hello{
-    margin-top: 150px;
+
+@media screen and (max-width: 800px) {
+  #home {
+    padding-top: 140px;
+  }
+  .my-quote {
+    margin-top: 60px;
+  }
+  /* Base styles for nav links */
+  .app-nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: rgb(164, 205, 214);
+    color: white;
+    /* height: 100vh; */
+    width: 100%;
+    padding: 10px;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    z-index: 10;
+  }
+  /* When active: Slide down with opacity */
+  .app-nav-links.active {
+    display: flex;
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  /* Smooth transition for menu icon rotation */
+  #menu-toggle {
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  #menu-toggle.active {
+    transform: rotate(90deg);
+  }
+
+  /* Disable body scrolling */
+  .no-scroll {
+    overflow: hidden;
+  }
+
+  .app-nav-links ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .app-nav-links.active {
+    display: flex; /* Show menu when active */
+  }
 }
-.home-bind span{
+@media screen and (max-width: 1200px) {
+  .app-nav {
+    padding-bottom: 20px;
+  }
+  .welcome-page h1 {
+    font-size: 60px;
+  }
+  .welcome-page h4 {
+    margin-top: 5px;
+    font-size: 35px;
+  }
+  .home-bind span {
     font-size: 20px;
-}
-.my-quote{
-    margin-top: 280px;
-}
-.my-quote p{
+  }
+  .my-quote p {
     font-size: 32px;
-}
+  }
 }
