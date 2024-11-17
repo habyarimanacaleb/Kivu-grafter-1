@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-weight: 800;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.app-nav{
+    background-color: rgba(25, 199, 242);
+    opacity: 1;
+    z-index: 1;
+    padding-bottom: 20px;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 2px solid gray;
+    padding: 8px;
+    height: 12%;
+}
+.app-nav-links ul{
+  display: flex;
+  place-items: center;
+  list-style-type: none;
+ 
+}
+.app-logo h1{
+    font-size: 40px;
+}
+.app-logo p{
+    font-size: 18px;
+    font-weight: 600;
+}
+.app-nav-links ul li{
+    padding-right: 20px;
+}
+.app-nav-links ul li a{
+text-decoration: none;
+font-size: x-large;
+}
+.app-nav-links ul li a:hover{
+color: rgb(100, 102, 139);
+}
+.app-nav-links ul li a:focus{
+color: rgb(0, 102, 139,.95);
+}
+
+.app-menu-icon{
+    display: flex;
+    flex-direction: column;
+    transition: transform 1s ease;
+    place-items: center;
+}
+.app-menu-icon button{
+    background-color: black;
+    width: 40px;
+    padding: 1px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.app-menu-icon:hover{
+   transform: translateY(-1.5px) scale(1.1);
+}
+
+#home {
+    height: 100vh;
+    padding-top: 100px;
+    font-family: monospace, Arial;
+    background-image: url('./kivu-image/bg-2.jpg');
+    background-position: center;
+    background-attachment: fixed; 
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hello{
+    padding-top: 50px;
+}
+.welcome-page h1{
+  text-transform: uppercase;
+}
+.app-menu-icon{
+    display: none;
+}
+
+.home-bind span{
+    font-size: 20px;
+}
+
+.home-bind span::before{
+    content: "‖";
+}
+
+@media screen and (max-width:786px)
+ {
+    .app-nav{
+        padding-bottom: 20px;
+    }
+   .app-nav-links{
+    display: none;
+    justify-content: space-between;
+   } 
+   .app-menu-icon{
+    display: flex;
+   }
+
+   .hello{
+    padding-top: 50px;
+}
+.welcome-page h1{
+  font-size: 20px;
+}
+.welcome-page h4{
+    margin-top: 5px;
+  font-size: 20px;
+}
+.home-bind span{
+    font-size: 12px;
+}
+.my-quote{
+    margin-top: 200px;
+}
+.my-quote p{
+font-size: 16px;
+}
+}
+
+@media screen and (max-width:1200px)
+ {
+    .app-nav{
+        padding-bottom: 20px;
+    }
+.welcome-page h1{
+  font-size: 60px;
+}
+.welcome-page h4{
+    margin-top: 5px;
+  font-size: 35px;
+}
+.hello{
+    margin-top: 150px;
+}
+.home-bind span{
+    font-size: 20px;
+}
+.my-quote{
+    margin-top: 280px;
+}
+.my-quote p{
+    font-size: 32px;
+}
+}
