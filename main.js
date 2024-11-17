@@ -37,7 +37,7 @@
                 <div class="p-5">
                     <h3 class="text-xl font-bold">${card.title}</h3>
                     <p class="text-gray-600 mt-2">${card.description}</p>
-                    <a href="#" class="text-blue-500 mt-4 inline-block hover:text-blue-700">Learn More</a>
+                    <a href="#" class="text-blue-500 mt-4 inline-block hover:text-blue-700">Learn More...</a>
                 </div>
             `;
 
