@@ -1,0 +1,81 @@
+/* Footer styling */
+
+.app-footer {
+    background-color: rgba(25, 199, 242, 0.9);
+    opacity: 0.9; 
+    padding-top: 30px;
+    color: rgb(27, 26, 26);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.bg-footer {
+    padding: 20px 0;
+}
+
+.footer-content {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: flex-start;
+}
+
+.footer-left, .footer-middle, .footer-right {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.footer-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.footer-description {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+.footer-links {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-link {
+    font-size: 16px;
+    text-decoration: none;
+    color: rgb(20, 20, 20);
+    display: block;
+    margin-bottom: 8px;
+}
+
+.footer-link:hover {
+    color: #3b82f6;
+}
+
+/* Social Media Icons */
+.footer-social {
+    padding: 20px;
+    text-align: center;
+}
+
+.social-icon {
+    color: white;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #3b82f6;
+}
+
+/* Mobile and tablet responsiveness */
+@media screen and (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-left, .footer-middle, .footer-right {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
