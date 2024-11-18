@@ -4,7 +4,7 @@
     background-color: rgba(25, 199, 242, 0.9);
     opacity: 0.9; 
     padding-top: 30px;
-    color: rgb(27, 26, 26);
+    color: inherit;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -41,7 +41,7 @@
 .footer-link {
     font-size: 16px;
     text-decoration: none;
-    color: rgb(20, 20, 20);
+    /* color: rgb(20, 20, 20); */
     display: block;
     margin-bottom: 8px;
 }

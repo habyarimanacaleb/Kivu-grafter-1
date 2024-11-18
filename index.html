@@ -20,11 +20,11 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
-    <link rel="stylesheet" href="./services.css" />
-    <link rel="stylesheet" href="./Button.css" />
-    <link rel="stylesheet" href="./animation.css" />
-    <link rel="stylesheet" href="./Testimonial.css" />
-    <link rel="stylesheet" href="./footer.css" />
+    <link rel="stylesheet" href="./css/services.css" />
+    <link rel="stylesheet" href="./css/Button.css" />
+    <link rel="stylesheet" href="./css/animation.css" />
+    <link rel="stylesheet" href="./css/Testimonial.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
   </head>
   <body>
     <nav>
@@ -98,8 +98,15 @@
       >
         <!-- Cards will be dynamically inserted here -->
       </div>
+      
     </section>
-
+    <div class="hero">
+      <div class="hero-content">
+        <h2>Discover More Adventures</h2>
+        <p>Explore the breathtaking beauty of Karongi and Lake Kivu.</p>
+        <a href="#content" class="cta-btn">Explore Now</a>
+      </div>
+    </div>
     <section id="testimonials" class="bg-gray-100 py-16">
       <div class="container mx-auto text-center">
         <h1 class="text-4xl font-bold mb-8">What Our Guests Say</h1>
@@ -110,7 +117,6 @@
           <!-- Dynamic Testimonials Cards Will Go Here -->
         </div>
         <button id="shareButton" class="btn mt-8">Share Your Experience</button>
-
         <!-- Modal for review submission -->
         <div id="reviewModal" class="modal hidden">
           <div class="modal-content">
@@ -123,7 +129,6 @@
                 id="tourName"
                 required
               /><br />
-
               <label class="form-label" for="rating">Rating</label>
               <input
                 class="form-input"
@@ -133,7 +138,6 @@
                 max="5"
                 required
               /><br />
-
               <label class="form-label" for="feedback">Your Feedback</label>
               <textarea
                 class="form-textarea"
@@ -142,7 +146,6 @@
                 required
               ></textarea
               ><br />
-
               <button class="submit-btn" type="submit">Submit Review</button>
             </form>
             <button class="close-btn" id="closeModal">Close</button>
@@ -157,70 +160,69 @@
       >
         <!-- Left Section - Company Info -->
         <div class="footer-left mb-6 lg:mb-0">
-          <h3 class="footer-title text-2xl font-bold text-white mb-3">
+          <h3 class="footer-title text-2xl font-bold mb-3">
             Explore Lake Kivu Tours
           </h3>
-          <p class="footer-description text-white text-lg">
+          <p class="footer-description text-lg">
             Discover the best of Rwanda's natural beauty, from scenic boat tours
             to cultural immersions and adventurous hikes.
           </p>
         </div>
-
         <!-- Middle Section - Useful Links -->
         <div class="footer-middle mb-6 lg:mb-0">
-          <h3 class="footer-title text-2xl font-bold text-white mb-3">
+          <h3 class="footer-title text-2xl font-bold  mb-3">
             Quick Links
           </h3>
           <ul class="footer-links space-y-2">
             <li>
-              <a href="#home" class="footer-link text-white hover:text-blue-300"
+              <a href="#home" class="footer-link  hover:text-blue-300"
                 >Home</a
               >
             </li>
             <li>
               <a
                 href="#about"
-                class="footer-link text-white hover:text-blue-300"
+                class="footer-link hover:text-blue-300"
                 >About</a
               >
             </li>
             <li>
               <a
                 href="#services"
-                class="footer-link text-white hover:text-blue-300"
+                class="footer-link  hover:text-blue-300"
                 >Services</a
               >
             </li>
             <li>
               <a
                 href="#testimonials"
-                class="footer-link text-white hover:text-blue-300"
+                class="footer-link  hover:text-blue-300"
                 >Testimonials</a
               >
             </li>
             <li>
               <a
                 href="#contact"
-                class="footer-link text-white hover:text-blue-300"
+                class="footer-link hover:text-blue-300"
                 >Contact</a
               >
             </li>
             <li>
-              <a href="#faq" class="footer-link text-white hover:text-blue-300"
+              <a href="#faq" class="footer-link hover:text-blue-300"
                 >FAQs</a
               >
             </li>
             <li>
               <a
                 href="/privacy-policy"
-                class="footer-link text-white hover:text-blue-300"
+                class="footer-link  hover:text-blue-300"
                 >Privacy Policy</a
               >
             </li>
             <li>
               <a
                 href="/terms-and-conditions"
-                class="footer-link text-white hover:text-blue-300"
+                class="footer-link hover:text-blue-300"
                 >Terms & Conditions</a
               >
             </li>
@@ -229,17 +231,17 @@
 
         <!-- Right Section - Contact Info & Location -->
         <div class="footer-right mb-6 lg:mb-0">
-          <h3 class="footer-title text-2xl font-bold text-white mb-3">
+          <h3 class="footer-title text-2xl font-bold  mb-3">
             Contact Us
           </h3>
-          <p class="footer-description text-white text-lg">
-            Email: info@laketour.com<br />
-            Phone: +250 123 456 789
+          <p class="footer-description  text-lg">
+            <p> Email: info@laketour.com</p>
+            <p> Phone/Whatsapp: +250 123 456 789</p>
           </p>
-          <h3 class="footer-title text-2xl font-bold text-white mb-3 mt-6">
+          <h3 class="footer-title text-2xl font-bold mb-3 mt-6">
             Our Location
           </h3>
-          <p class="footer-description text-white text-lg">
+          <p class="footer-description text-lg">
             Address: Kivu Lake Tour Office, Kibuye, Rwanda<br />
             <a
               href="https://www.google.com/maps?q=Kibuye,+Rwanda"
@@ -252,7 +254,7 @@
       </div>
 
       <!-- Social Media Links -->
-      <div class="footer-social text-blue py-3 text-center">
+      <div class="footer-social  py-3 text-center">
         <a
           href="https://facebook.com"
           class="social-icon mx-3 text-2xl hover:text-blue-400"
@@ -271,31 +273,7 @@
           ><i class="fa-brands fa-square-instagram"></i></a>
       </div>
     </footer>
-
-    <script>
-      const menuToggle = document.getElementById("menu-toggle");
-      const navLinks = document.getElementById("nav-links");
-      const navLinkItems = document.querySelectorAll(".app-nav-links ul li a");
-      const body = document.body;
-      const section = document.section;
-
-      // Toggle the menu visibility
-      menuToggle.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
-        body.classList.toggle("no-scroll");
-        section.style.opacity = 0.4;
-      });
-
-      // Close the menu when clicking any link
-      navLinkItems.forEach((link) => {
-        link.addEventListener("click", () => {
-          navLinks.classList.remove("active");
-          body.classList.remove("no-scroll");
-          section.style.opacity = 1;
-        });
-      });
-    </script>
     <script src="./main.js"></script>
-    <script src="./animation.js"></script>
+    <script src="./js/animation.js"></script>
   </body>
 </html>

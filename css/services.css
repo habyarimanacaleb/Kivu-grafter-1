@@ -24,6 +24,7 @@ section {
     transition: transform 0.3s ease-in-out;
 }
 
+
 /* On large screens, make the images larger */
 @media screen and (min-width: 1024px) {
     .card img {
@@ -34,4 +35,6 @@ section {
         transform: scale(1.05); /* Add a subtle zoom effect on hover */
     }
 }
+
+
 
