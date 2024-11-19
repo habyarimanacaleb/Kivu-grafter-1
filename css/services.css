@@ -1,11 +1,11 @@
 section {
-    padding: 90px 20px; /* Add space inside each section */
+    padding: 100px 20px; /* Add space inside each section */
     margin: 0 auto; /* Center the content */
 }
 
-section + section {
-    margin-top: 50px; /* Add space between adjacent sections */
-}
+/* section + section {
+    margin-top: 50px; 
+} */
 section {
     min-height: 100vh; /* Full viewport height */
     display: flex;
@@ -18,9 +18,7 @@ section {
 
 .card img {
     width: 100%;
-    height: auto;
     border-radius: 8px;
-    object-fit: cover;
     transition: transform 0.3s ease-in-out;
 }
 

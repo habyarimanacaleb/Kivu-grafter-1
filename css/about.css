@@ -1,0 +1,39 @@
+.about{
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    background: url('../kivu-image/about-bg.jpg') no-repeat center center/cover; /* Full background image */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.about .content {
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay for readability */
+    padding: 20px 30px;
+    border-radius: 10px;
+   
+}
+
+.about p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    max-width: 600px;
+}
+
+.about.btn {
+    padding: 10px 20px;
+    background-color: #00bfff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.about.btn:hover {
+    background-color: #007acb;
+}

@@ -1,27 +1,27 @@
 const servicesData = [
     {   id:1,
-        image: './Kivu-image/six-island.jpg',
+        image: '../Kivu-image/long-trip.jpg',
         title: 'Six Island Tour',
         description: 'Embark on an unforgettable journey across Lake Kivu’s stunning islands.',
         link: 'six-island.html'
     },
     {
         id:2,
-        image: './Kivu-image/night-fishing.jpg',
+        image: '../Kivu-image/long-trip.jpg',
         title: 'Night Fishing with Singing Fishermen',
         description: 'Experience magical cultural nights with the singing fishermen.',
         link: 'night-fishing.html'
     },
     {
         id:3,
-        image: './Kivu-image/hiking.jpg',
+        image: '../Kivu-image/long-trip.jpg',
         title: 'Karongi Mountains Biking and Hiking',
         description: 'Enjoy breathtaking trails through Karongi’s picturesque mountains.',
         link: 'biking-hiking.html'
     },
     {
         id:4,
-        image: './Kivu-image/local-tours.jpg',
+        image: '../Kivu-image/long-trip.jpg',
         title: 'Local Cultural and Geographical Tours',
         description: 'Discover the rich culture and geographical beauty of the region.',
         link: 'local-tours.html'
@@ -35,6 +35,18 @@ const servicesData = [
     }
 ];
 const servicesContainer = document.getElementById("services-container");
+const params = new URLSearchParams(window.location.search);
+const serviceId = params.get('id');
+
+const service = servicesData.find((item) => item.id == serviceId);
+if (service) {
+  document.querySelector('#service-title').textContent = service.title;
+  document.querySelector('#service-description').textContent = service.description;
+  document.querySelector('#service-image').src = service.image;
+} else {
+  document.querySelector('#service-detail').textContent = 'Service not found';
+}
+
 
 function renderServices(data) {
     servicesContainer.innerHTML = ""; // Clear existing content
@@ -50,7 +62,7 @@ function renderServices(data) {
             "duration-300"
         );
         serviceCard.innerHTML = `
-            <img src="${service.image}" alt="${service.title}" class="w-full object-cover">
+            <img src="${service.image}" alt="${service.title}" class="object-cover">
             <div class="p-4">
                 <h3 class="text-lg font-semibold">${service.title}</h3>
                 <p class="text-gray-600">${service.description}</p>
@@ -59,6 +71,7 @@ function renderServices(data) {
         `;
         servicesContainer.appendChild(serviceCard);
     });
+
 }
 // Render the services data
 renderServices(servicesData);
