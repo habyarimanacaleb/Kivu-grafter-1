@@ -121,6 +121,16 @@ p.italic {
 .hover\:scale-105:hover {
   transform: scale(1.05);
 }
+/* whtsapp integration */
+.chat-with-me{
+  border: 2px solid black;
+  padding: 5px;
+  border-radius: 30px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 100;
+}
 /* responsiveness design */
 @media screen and (max-width: 786px) {
   .app-menu-icon {

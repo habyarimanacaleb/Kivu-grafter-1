@@ -122,7 +122,7 @@ function createCards() {
                 <div class="p-5">
                     <h3 class="text-xl font-bold">${card.title}</h3>
                     <p class="text-gray-600 mt-2">${card.description}</p>
-                    <a href="../service-detail.html?id=${card.id}" class="text-blue-500 mt-6 inline-block hover:text-blue-700">Learn More...</a>
+                    <a id='Learnmore-${cardsData.id}' class="text-blue-500 mt-6 inline-block hover:text-blue-700">Learn More...</a>
                 </div>
             `;
     // Append the card to the container
@@ -131,6 +131,12 @@ function createCards() {
 }
 // Call the function to create and insert cards into the DOM
 createCards();
+
+const learnMoreButton1 = document.getElementById('Learnmore-1').addEventListener('click',(e)=>{
+  e.preventDefault();
+  
+  window.location.href = '../night-fishing.html'
+})
 
 ///testimonials
 function testimonialCard() {
@@ -190,29 +196,3 @@ function testimonialCard() {
     testimonialContainer.appendChild(cardElement);
   });
 }
-
-// Initialize testimonials dynamically
-testimonialCard();
-
-/// share your experience
-const bodyVisibility = document.body;
-
-document.getElementById("shareButton").addEventListener("click", function () {
-  document.getElementById("reviewModal").classList.remove("hidden");
-  bodyVisibility.style.overflow = "hidden";
-});
-
-document.getElementById("closeModal").addEventListener("click", function () {
-  document.getElementById("reviewModal").classList.add("hidden");
-  bodyVisibility.style.overflow = "visible";
-});
-
-document
-  .getElementById("reviewForm")
-  .addEventListener("submit", function (event) {
-    event.preventDefault();
-    // Handle the review submission (e.g., save to database)
-    alert("Thank you for sharing your experience!");
-    bodyVisibility.style.overflow = "visible";
-    document.getElementById("reviewModal").classList.add("hidden");
-  });
