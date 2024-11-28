@@ -1,13 +1,13 @@
 section {
     padding: 100px 20px; /* Add space inside each section */
-    margin: 0 auto; /* Center the content */
+    margin: 0 auto;
 }
 
 /* section + section {
     margin-top: 50px; 
 } */
 section {
-    min-height: 100vh; /* Full viewport height */
+    /* min-height: 100vh;  */
     display: flex;
     flex-direction: column;
     justify-content: center; /* Center content vertically */

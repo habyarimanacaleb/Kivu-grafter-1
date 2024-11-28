@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kivu Grafter | Testimonials</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../css/Testimonial.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/Button.css" />
+    <link rel="stylesheet" href="../css/animation.css" />
+</head>
+<body>
+    <nav>
+        <div class="app-nav">
+          <div class="app-logo">
+            <h1 class="Logo-name">Kivu</h1>
+            <p class="Logo-description">Grafter</p>
+          </div>
+          <div class="app-nav-links" id="nav-links">
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#service">Services</a></li>
+              <li><a href="#testimonial">Testimonials</a></li>
+            </ul>
+          </div>
+          <div class="app-menu-icon" id="menu-toggle" title="Menu">
+            <button></button>
+            <button></button>
+            <button></button>
+          </div>
+        </div>
+      </nav>
+    <section class="testimonials">
+        <div class="container mx-auto text-center">
+          <h1 class="text-4xl font-bold mb-8">What Our Guests Say</h1>
+          <div
+            class="testimonial grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            id="testimonial"
+          >
+            <!-- Dynamic Testimonials Cards Will Go Here -->
+          </div>
+          <button id="shareButton" class="btn mt-8">Share Your Experience</button>
+          <!-- Modal for review submission -->
+          <div id="reviewModal" class="modal hidden">
+            <div class="modal-content">
+              <h2 class="modal-title">Share Your Experience</h2>
+              <form id="reviewForm">
+                <label class="form-label" for="tourName">Tour Name</label>
+                <input
+                  class="form-input"
+                  type="text"
+                  id="tourName"
+                  required
+                /><br />
+                <label class="form-label" for="rating">Rating</label>
+                <input
+                  class="form-input"
+                  type="number"
+                  id="rating"
+                  min="1"
+                  max="5"
+                  required
+                /><br />
+                <label class="form-label" for="feedback">Your Feedback</label>
+                <textarea
+                  class="form-textarea"
+                  id="feedback"
+                  rows="4"
+                  required
+                ></textarea
+                ><br />
+                <button class="submit-btn" type="submit">Submit Review</button>
+              </form>
+              <button class="close-btn" id="closeModal">Close</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="app-footer bg-footer">
+        <div
+          class="footer-content container mx-auto px-6 py-10 flex flex-col lg:flex-row justify-between items-start"
+        >
+          <!-- Left Section - Company Info -->
+          <div class="footer-left mb-6 lg:mb-0">
+            <h3 class="footer-title text-2xl font-bold mb-3">
+              Explore Lake Kivu Tours
+            </h3>
+            <p class="footer-description text-lg">
+              Discover the best of Rwanda's natural beauty, from scenic boat tours
+              to cultural immersions and adventurous hikes.
+            </p>
+          </div>
+          <!-- Middle Section - Useful Links -->
+          <div class="footer-middle mb-6 lg:mb-0">
+            <h3 class="footer-title text-2xl font-bold  mb-3">
+              Quick Links
+            </h3>
+            <ul class="footer-links space-y-2">
+              <li>
+                <a href="#home" class="footer-link  hover:text-blue-300"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="footer-link hover:text-blue-300"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="footer-link  hover:text-blue-300"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#testimonials"
+                  class="footer-link  hover:text-blue-300"
+                  >Testimonials</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="footer-link hover:text-blue-300"
+                  >Contact</a
+                >
+              </li>
+              <li>
+                <a href="#faq" class="footer-link hover:text-blue-300"
+                  >FAQs</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/privacy-policy"
+                  class="footer-link  hover:text-blue-300"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/terms-and-conditions"
+                  class="footer-link hover:text-blue-300"
+                  >Terms & Conditions</a
+                >
+              </li>
+            </ul>
+          </div>
+  
+          <!-- Right Section - Contact Info & Location -->
+          <div class="footer-right mb-6 lg:mb-0">
+            <h3 class="footer-title text-2xl font-bold  mb-3">
+              Contact Us
+            </h3>
+            <p class="footer-description  text-lg">
+              <p> Email: info@laketour.com</p>
+              <p> Phone/Whatsapp: +250 123 456 789</p>
+            </p>
+            <h3 class="footer-title text-2xl font-bold mb-3 mt-6">
+              Our Location
+            </h3>
+            <p class="footer-description text-lg">
+              Address: Kivu Lake Tour Office, Kibuye, Rwanda<br />
+              <a
+                href="https://www.google.com/maps?q=Kibuye,+Rwanda"
+                target="_blank"
+                class="text-blue-600 hover:underline"
+                >View on Google Maps</a
+              >
+            </p>
+          </div>
+          <p class="chat-with-me" hidden>
+            <a href="https://wa.me/25078xxxxxx" target="_blank" style="text-decoration: none; color: inherit;">
+             Whatsapp Me
+            </a>
+          </p>      
+        </div>
+        <!-- Social Media Links -->
+        <div class="footer-social  py-3 text-center">
+          <a
+            href="https://facebook.com"
+            class="social-icon mx-3 text-2xl hover:text-blue-400"
+            >
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+          <a
+            href="https://twitter.com"
+            class="social-icon mx-3 text-2xl hover:text-blue-400"
+            >
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+          <a
+            href="https://instagram.com"
+            class="social-icon mx-3 text-2xl hover:text-blue-400"
+            ><i class="fa-brands fa-square-instagram"></i></a>
+        </div>
+      </footer>
+
+      <script src="../js/testimonials.js"></script>
+</body>
+</html>

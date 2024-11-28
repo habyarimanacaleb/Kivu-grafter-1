@@ -39,7 +39,6 @@
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#service">Services</a></li>
-            <li><a href="#testimonial">Testimonials</a></li>
           </ul>
         </div>
         <div class="app-menu-icon" id="menu-toggle" title="Menu">
@@ -99,53 +98,6 @@
         <!-- Cards will be dynamically inserted here -->
       </div>
     </section>
-    <section class="testimonials">
-      <div class="container mx-auto text-center">
-        <h1 class="text-4xl font-bold mb-8">What Our Guests Say</h1>
-        <div
-          class="testimonial grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          id="testimonial"
-        >
-          <!-- Dynamic Testimonials Cards Will Go Here -->
-        </div>
-        <button id="shareButton" class="btn mt-8">Share Your Experience</button>
-        <!-- Modal for review submission -->
-        <div id="reviewModal" class="modal hidden">
-          <div class="modal-content">
-            <h2 class="modal-title">Share Your Experience</h2>
-            <form id="reviewForm">
-              <label class="form-label" for="tourName">Tour Name</label>
-              <input
-                class="form-input"
-                type="text"
-                id="tourName"
-                required
-              /><br />
-              <label class="form-label" for="rating">Rating</label>
-              <input
-                class="form-input"
-                type="number"
-                id="rating"
-                min="1"
-                max="5"
-                required
-              /><br />
-              <label class="form-label" for="feedback">Your Feedback</label>
-              <textarea
-                class="form-textarea"
-                id="feedback"
-                rows="4"
-                required
-              ></textarea
-              ><br />
-              <button class="submit-btn" type="submit">Submit Review</button>
-            </form>
-            <button class="close-btn" id="closeModal">Close</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <footer class="app-footer bg-footer">
       <div
         class="footer-content container mx-auto px-6 py-10 flex flex-col lg:flex-row justify-between items-start"
