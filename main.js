@@ -23,49 +23,48 @@ navLinkItems.forEach((link) => {
 // Example data for the cards (you can fetch this data from an API or define it locally)
 const cardsData = [
   {
-    id:1,
+    id: 1,
     image: "./kivu-image/Six-Island.jpg",
     title: "SIX ISLANDS KIVU TOURS",
     description:
       "Taking a guided boat tour on Lake Kivu offers a fascinating exploration of its islands, each with its own distinctive charm and history. ",
   },
   {
-    id:2,
+    id: 2,
     image: "./kivu-image/Six-Island.jpg",
     title: "KAYAKING ON LAKE KIVU",
     description:
       "Enjoy a serene kayaking experience on the tranquil waters of Lake Kivu, whether you're with a friend or exploring solo. Rent a light, inflatable kayak and paddle at your own pace, soaking in the breathtaking scenery of volcanic mountains and lush landscapes along the shoreline. ",
   },
   {
-    id:3,
+    id: 3,
     image: "./kivu-image/night-shift.jpg",
     title: "Night Fishing With Singing Fisherman",
     description:
       "The night fishing experience tour on Lake Kivu offers a unique and immersive adventure into the traditional fishing practices of Rwandan fishermen.",
   },
   {
-    id:4,
+    id: 4,
     image: "./Kivu-image/local-culture-2.jpg",
     title: "Local Cultural and Geographical Tours",
     description:
       "Discover the vibrant culture and geographical wonders of the region. From traditional dances to breathtaking landmarks, experience the heart of Rwandan heritage.",
   },
   {
-    id:5,
+    id: 5,
     image: "./Kivu-image/long-trip.jpg",
     title: "KIBUYE LOCAL PLANTATION TOURS",
-    description: "LONG TRIP KIBUYE TO GISENYI/RUBAVU",
+    description:
+      "Traveling from Kibuye to Gisenyi/Rubavu offers a scenic experience along Lake Kivu in Rwanda. The route features lush landscapes, terraced hills, and views of the lake, making it a popular choice for tourists. The journey is approximately 110 kilometers and takes around 2.5 to 3 hours by road.",
   },
   {
-    id:6,
+    id: 6,
     image: "./Kivu-image/long-trip.jpg",
     title: "LONG TRIP KIBUYE TO GISENYI/RUBAVU",
     description:
       "Kibuye, located on the shores of Lake Kivu in Rwanda, offers a rich experience for visitors interested in exploring local plantations and agriculture, including coffee, macadamia nuts, banana farming, and beans. ",
   },
 ];
-
-
 
 // Get the container where the cards will be inserted
 const container = document.querySelector(".service-container");
@@ -98,4 +97,3 @@ function createCards() {
 }
 // Call the function to create and insert cards into the DOM
 createCards();
-
