@@ -18,6 +18,6 @@ section {
         height: 300px; 
     }
     .card:hover img {
-        transform: scale(1.05); /* Add a subtle zoom effect on hover */
+        transform: scale(1.05);
     }
 }

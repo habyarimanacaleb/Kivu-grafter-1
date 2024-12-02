@@ -1,13 +1,13 @@
 /* Footer styling */
 
 .app-footer {
-    background-color: rgba(25, 199, 242, 0.9);
+    background-color: rgb(0, 204, 255);
     opacity: 0.9; 
     padding-top: 30px;
     color: inherit;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     position: relative;
-    z-index: 1;
+    /* z-index: 1; */
 }
 
 .bg-footer {

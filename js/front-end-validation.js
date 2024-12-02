@@ -1,20 +1,29 @@
+// Get the form element
+const form = document.getElementById('contact-form-data');
 
-const contactFormData = document.getElementById('contact-form-data').addEventListener('submit',function(event){
-    event.preventDefault();
-let name = document.getElementById('name').value;
-let email= document.getElementById('email').value;  
-let message= document.getElementById('message').value;  
+// Add submit event listener
+form.addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent form default submission
+
+    // Get form values
+    let name = document.getElementById('name').value.trim();
+    let email = document.getElementById('email').value.trim();
+    let message = document.getElementById('message').value.trim();
+
     try {
-        console.log('Form is submitted')
-        if(!name ||!email & !message){
-            alert('All Field Are Required!!')
+        console.log('Form is submitted');
+
+        // Check for empty fields
+        if (!name || !email || !message) {
+            alert('All fields are required!');
+        } else {
+            alert('Thank you for your query/question!');
+            alert(`Your data is recorded well: ${name}`);
         }
-        else{
-            alert('Thank your for your querry/question!!')
-            alert('Your Data Are recorded well.',name)
-        }
-        contactFormData.reset();
     } catch (error) {
-        alert('There is error in form submission')
+        alert('There is an error in form submission');
     }
-})
+
+    // Reset the form
+    form.reset();
+});
