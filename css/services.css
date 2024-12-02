@@ -1,38 +1,23 @@
 section {
-    padding: 100px 20px; /* Add space inside each section */
     margin: 0 auto;
 }
-
-/* section + section {
-    margin-top: 50px; 
-} */
-section {
-    /* min-height: 100vh;  */
+#about,#service,#home {
+    padding: 100px 20px; 
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
-    position: relative; /* Ensures stacking context */
-    /* z-index: 1; */
+    justify-content: center; 
+    align-items: center; 
+    position: relative; 
 }
-
 .card img {
-    width: 100%;
     border-radius: 8px;
     transition: transform 0.3s ease-in-out;
 }
-
-
-/* On large screens, make the images larger */
 @media screen and (min-width: 1024px) {
     .card img {
-        height: 300px; /* Increase height for better visibility */
+        height: 300px; 
     }
-    
     .card:hover img {
         transform: scale(1.05); /* Add a subtle zoom effect on hover */
     }
 }
-
-
-
