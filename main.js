@@ -24,47 +24,90 @@ navLinkItems.forEach((link) => {
 const cardsData = [
   {
     id: 1,
-    image: "./kivu-image/Six-Island.jpg",
-    title: "SIX ISLANDS KIVU TOURS",
+    image: "./kivu-image/six-island.jpg",
+    title: "Six Islands Kivu Tours",
     description:
-      "Taking a guided boat tour on Lake Kivu offers a fascinating exploration of its islands, each with its own distinctive charm and history. ",
+      "Discover six unique islands including Punishment, Peace, and Farm Islands. Each offers a blend of cultural heritage, lush landscapes, and recreational activities.",
   },
   {
     id: 2,
     image: "./kivu-image/kayaki-image-1.jpg",
-    title: "KAYAKING ON LAKE KIVU",
+    title: "Kayaking on Lake Kivu",
     description:
-      "Enjoy a serene kayaking experience on the tranquil waters of Lake Kivu, whether you're with a friend or exploring solo. Rent a light, inflatable kayak and paddle at your own pace, soaking in the breathtaking scenery of volcanic mountains and lush landscapes along the shoreline. ",
+      "Glide across Lake Kivu’s calm waters while enjoying stunning views of volcanic mountains. Perfect for both solo explorers and groups.",
   },
   {
     id: 3,
-    image: "./kivu-image/night-shift.jpg",
-    title: "Night Fishing With Singing Fisherman",
+    image: "./kivu-image/night-fishing.jpg",
+    title: "Night Fishing with Singing Fishermen",
     description:
-      "The night fishing experience tour on Lake Kivu offers a unique and immersive adventure into the traditional fishing practices of Rwandan fishermen.",
+      "Experience Rwandan tradition with night fishing tours. Enjoy local songs while participating in or observing this cultural activity.",
   },
   {
     id: 4,
-    image: "./Kivu-image/local-culture-2.jpg",
+    image: "./kivu-image/local-culture.jpg",
     title: "Local Cultural and Geographical Tours",
     description:
-      "Discover the vibrant culture and geographical wonders of the region. From traditional dances to breathtaking landmarks, experience the heart of Rwandan heritage.",
+      "Immerse yourself in Rwanda’s rich culture with traditional dances, local cuisine, and scenic tours of Nyakariba Swamp and Nkombo Island.",
   },
   {
     id: 5,
-    image: "./Kivu-image/local-plantantion-1.jpg",
-    title: "KIBUYE LOCAL PLANTATION TOURS",
+    image: "./kivu-image/plantation.jpg",
+    title: "Kibuye Local Plantation Tours",
     description:
-      "Traveling from Kibuye to Gisenyi/Rubavu offers a scenic experience along Lake Kivu in Rwanda. The route features lush landscapes, terraced hills, and views of the lake, making it a popular choice for tourists. The journey is approximately 110 kilometers and takes around 2.5 to 3 hours by road.",
+      "Explore plantations of coffee, bananas, and macadamia nuts. Learn about traditional farming practices while enjoying scenic landscapes.",
   },
   {
     id: 6,
-    image: "./Kivu-image/long-trip.jpg",
-    title: "LONG TRIP KIBUYE TO GISENYI/RUBAVU",
+    image: "./kivu-image/long-trip.jpg",
+    title: "Long Trip: Kibuye to Gisenyi",
     description:
-      "Kibuye, located on the shores of Lake Kivu in Rwanda, offers a rich experience for visitors interested in exploring local plantations and agriculture, including coffee, macadamia nuts, banana farming, and beans. ",
+      "Embark on a boat trip along Lake Kivu’s shores. Take in breathtaking views and explore cultural attractions during this journey.",
+  },
+  {
+    id: 7,
+    image: "./kivu-image/congo-nile-trail.jpg",
+    title: "Congo Nile Trail Adventures",
+    description:
+      "Hike, bike, or kayak along this iconic trail. Enjoy diverse landscapes, vibrant communities, and stunning lake views.",
+  },
+  {
+    id: 8,
+    image: "./kivu-image/night-amphibians.jpg",
+    title: "Night Amphibians Tour",
+    description:
+      "Explore Nyakariba Swamp under the stars. Spot unique amphibians and learn from knowledgeable guides about this nocturnal ecosystem.",
+  },
+  {
+    id: 9,
+    image: "./kivu-image/bird-watching.jpg",
+    title: "Bird Watching Experience",
+    description:
+      "Observe diverse bird species such as herons and kingfishers. Popular spots include Mbabara and Mafundugu Islands.",
+  },
+  {
+    id: 10,
+    image: "./kivu-image/coffee-macadamia.jpg",
+    title: "Coffee and Macadamia Experience",
+    description:
+      "Visit Kinunu’s plantations to learn about coffee and macadamia cultivation. Enjoy fresh brews and engage with local farmers.",
+  },
+  {
+    id: 11,
+    image: "./kivu-image/swamp-exploration.jpg",
+    title: "Nyakariba Swamp Exploration",
+    description:
+      "Take a guided tour through the swamp’s rich biodiversity. Perfect for eco-tourists and wildlife enthusiasts.",
+  },
+  {
+    id: 12,
+    image: "./kivu-image/eco-tourism.jpg",
+    title: "Eco-Tourism and Sustainable Travel",
+    description:
+      "Learn about sustainable practices while exploring Rwanda’s natural wonders. Engage with projects aimed at conservation and community development.",
   },
 ];
+
 
 // Get the container where the cards will be inserted
 const container = document.querySelector(".service-container");
@@ -74,14 +117,19 @@ function createCards() {
   cardsData.forEach((card) => {
     const cardElement = document.createElement("div");
     cardElement.classList.add(
+      "card",
       "bg-white",
       "rounded-lg",
       "shadow-md",
       "overflow-hidden",
       "transform",
-      "hover:scale-100",
+      "hover:scale-105",
       "transition-transform",
-      "duration-300"
+      "duration-300",
+      "p-5",
+      "sm:w-full", // Ensure cards span the full width on small screens
+      // "md:w-1/3", // Two columns on medium screens
+      // "lg:w-1/3"  // Three columns on large screens
     );
     cardElement.innerHTML = `
                 <img src="${card.image}" alt="${card.title}" class="text-center w-full object-cover" style="height:30vh;filter: brightness(1.2)">
