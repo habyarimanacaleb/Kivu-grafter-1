@@ -43,6 +43,9 @@
     .form-field input,.form-field textarea{
         width: 350px;
     }
+    .form-field textarea{
+        height: 55px;
+    }
     .contact-form{
         background-color: transparent;
         padding: 0px;

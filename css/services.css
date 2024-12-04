@@ -1,6 +1,9 @@
 section {
     margin: 0 auto;
 }
+.home{
+    padding-top: 200px;
+}
 #about,#service,#home {
     padding: 100px 20px; 
     display: flex;

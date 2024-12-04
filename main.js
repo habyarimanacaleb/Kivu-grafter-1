@@ -169,4 +169,3 @@ document.querySelectorAll('[id^="Learnmore-"]').forEach(button => {
     }
   });
 });
-
