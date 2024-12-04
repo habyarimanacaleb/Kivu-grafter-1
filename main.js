@@ -24,7 +24,7 @@ navLinkItems.forEach((link) => {
 const cardsData = [
   {
     id: 1,
-    image: "./kivu-image/six-island.jpg",
+    image: "./kivu-image/six-island-image-2.jpg",
     title: "Six Islands Kivu Tours",
     description:
       "Discover six unique islands including Punishment, Peace, and Farm Islands. Each offers a blend of cultural heritage, lush landscapes, and recreational activities.",
