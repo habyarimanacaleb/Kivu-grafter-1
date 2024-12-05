@@ -52,7 +52,7 @@ const cardsData = [
   },
   {
     id: 5,
-    image: "./kivu-image/plantation.jpg",
+    image: "./kivu-image/plantation-2.jpg",
     title: "Kibuye Local Plantation Tours",
     description:
       "Explore plantations of coffee, bananas, and macadamia nuts. Learn about traditional farming practices while enjoying scenic landscapes.",
@@ -66,14 +66,14 @@ const cardsData = [
   },
   {
     id: 7,
-    image: "./kivu-image/congo-nile-trail.jpg",
+    image: "./kivu-image/congo-nile.jpg",
     title: "Congo Nile Trail Adventures",
     description:
       "Hike, bike, or kayak along this iconic trail. Enjoy diverse landscapes, vibrant communities, and stunning lake views.",
   },
   {
     id: 8,
-    image: "./kivu-image/night-amphibians.jpg",
+    image: "./kivu-image/night-ampibians-2.jpg",
     title: "Night Amphibians Tour",
     description:
       "Explore Nyakariba Swamp under the stars. Spot unique amphibians and learn from knowledgeable guides about this nocturnal ecosystem.",
@@ -94,7 +94,7 @@ const cardsData = [
   },
   {
     id: 11,
-    image: "./kivu-image/swamp-exploration.jpg",
+    image: "./kivu-image/nyakiriba-swamp-2.jpg",
     title: "Nyakariba Swamp Exploration",
     description:
       "Take a guided tour through the swamp’s rich biodiversity. Perfect for eco-tourists and wildlife enthusiasts.",
