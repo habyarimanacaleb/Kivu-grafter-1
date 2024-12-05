@@ -153,6 +153,12 @@ const pageLinks ={
   "Learnmore-4": "details-pages/local-culture.html",
   "Learnmore-5": "details-pages/kibuye-local-plant.html",
   "Learnmore-6": "details-pages/long-trip.html",
+  "Learnmore-7": "details-pages/congo-nile.html",
+  "Learnmore-8": "details-pages/night-ampibians.html",
+  "Learnmore-9": "details-pages/bird-watching.html",
+  "Learnmore-10": "details-pages/coffee-macadamia.html",
+  "Learnmore-11": "details-pages/nyakiriba-swamp.html",
+  "Learnmore-12": "details-pages/eco-tourism.html",
 };
 // Add event listeners to buttons
 document.querySelectorAll('[id^="Learnmore-"]').forEach(button => {
