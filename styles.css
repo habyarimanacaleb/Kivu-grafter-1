@@ -90,7 +90,7 @@ body {
 }
 .my-quote {
   margin-top: 12rem;
-  font-size: 4.2rem;
+  font-size: 3.2rem;
 }
 /* about section*/
 .about {
@@ -135,7 +135,6 @@ p.italic {
 }
 .headings {
   font-size: 3.5rem;
-
 }
 .headings::after{
   display: flex;
@@ -144,9 +143,9 @@ p.italic {
   flex-direction: column;
   background-color: rgb(149, 214, 232);
   font-size: 6.5rem;
-  height: 20px;
+  height: 12px;
   margin-top: 20px;
-  max-width: 100px;
+  max-width: 80px;
   margin-bottom: 30px;
   transition: content .5s ease;
 }
@@ -173,13 +172,28 @@ p.italic {
   transform: translateY(-1rem);
 }
 /* responsiveness design */
+@media screen and (max-width:500px) {
+  .welcome-page h1 {
+    font-size: 1.3rem;
+  }
+  .welcome-page h4 {
+    font-size: 16px;
+  }
+  .home-bind span {
+    font-size: 8px;
+    margin-top: -30px;
+  }
+  .headings {
+    font-size: 1.2rem;
+  }
+  .my-quote {
+    margin-top: 2.5rem;
+    font-size: 22px;
+  }
+}
 @media screen and (max-width: 786px) {
   .app-menu-icon {
     display: flex;
-  }
-  .welcome-page h1 {
-    font-size: 25px;
-    margin-top: 6.25rem;
   }
   .welcome-page h4 {
     margin-top: 3px;
@@ -187,7 +201,7 @@ p.italic {
   }
   .home-bind span {
     font-size: 8px;
-    margin-top: -30px;
+    /* margin-top: -30px; */
   }
    .headings {
     font-size: 2.1rem;
@@ -201,7 +215,7 @@ p.italic {
   }
   .my-quote p {
     margin-top: 6.5rem;
-    font-size: 3.2rem;
+    font-size: 1.5rem;
   }
 }
 @media screen and (max-width: 800px) {
@@ -209,14 +223,14 @@ p.italic {
     padding-top: 140px;
   }
   .welcome-page h1 {
-    font-size: 3.1rem;
-    margin-top: 5rem;
+    font-size: 1.5rem;
+    margin-top: 6.25rem;
   }
   .welcome-page h4 {
-    font-size: 2rem;
+    font-size: 16px;
   }
   .home-bind span {
-    font-size: 1.2rem;
+    font-size: 0.5rem;
     margin-top: -30px;
   }
   /* Base styles for nav links */
