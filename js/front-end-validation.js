@@ -14,10 +14,10 @@ form.addEventListener('submit', function (event) {
         console.log('Form is submitted');
 
         // Check for empty fields
-        if (!name || !email || !message) {
+        if ( !email && !message) {
             alert('All fields are required!');
         } else {
-            alert('Thank you for your query/question!');
+            alert('Thank you for your Time!');
             alert(`Your data is recorded well: ${name}`);
         }
     } catch (error) {

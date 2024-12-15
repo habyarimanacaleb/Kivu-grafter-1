@@ -1,24 +1,3 @@
-const menuToggle = document.getElementById("menu-toggle");
-const navLinks = document.getElementById("nav-links");
-const navLinkItems = document.querySelectorAll(".app-nav-links ul li a");
-const body = document.body;
-// const body = document.body;
-
-// Toggle the menu visibility
-menuToggle.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-  body.classList.toggle("no-scroll");
-  // body.style.opacity = 0.4;
-});
-
-// Close the menu when clicking any link
-navLinkItems.forEach((link) => {
-  link.addEventListener("click", () => {
-    navLinks.classList.remove("active");
-    body.classList.remove("no-scroll");
-    // body.style.opacity = 1;
-  });
-});
 
 // Example data for the cards (you can fetch this data from an API or define it locally)
 const cardsData = [
@@ -39,14 +18,14 @@ const cardsData = [
   {
     id: 3,
     image: "./kivu-image/night-fishing.jpg",
-    title: "Night Fishing with Singing Fishermen",
+    title: "Night Fishing with Fishermen",
     description:
       "Experience Rwandan tradition with night fishing tours. Enjoy local songs while participating in or observing this cultural activity.",
   },
   {
     id: 4,
     image: "./kivu-image/local-culture.jpg",
-    title: "Local Cultural and Geographical Tours",
+    title: "Local Cultural and Geographics",
     description:
       "Immerse yourself in Rwanda’s rich culture with traditional dances, local cuisine, and scenic tours of Nyakariba Swamp and Nkombo Island.",
   },
