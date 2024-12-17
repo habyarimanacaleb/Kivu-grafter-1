@@ -11,14 +11,14 @@ const cardsData = [
   {
     id: 2,
     image: "./kivu-image/kayaki-image-1.jpg",
-    title: "Kayaking on Lake Kivu",
+    title: "Kayaking And Biking Adventure ",
     description:
       "Glide across Lake Kivu’s calm waters while enjoying stunning views of volcanic mountains. Perfect for both solo explorers and groups.",
   },
   {
     id: 3,
     image: "./kivu-image/night-fishing.jpg",
-    title: "Night Fishing with Fishermen",
+    title: "Night Fishing Experience",
     description:
       "Experience Rwandan tradition with night fishing tours. Enjoy local songs while participating in or observing this cultural activity.",
   },
@@ -39,7 +39,7 @@ const cardsData = [
   {
     id: 6,
     image: "./kivu-image/long-trip.jpg",
-    title: "Long Trip: Kibuye to Gisenyi",
+    title: "Kibuye To Gisenyi Long Trip",
     description:
       "Embark on a boat trip along Lake Kivu’s shores. Take in breathtaking views and explore cultural attractions during this journey.",
   },
@@ -84,6 +84,27 @@ const cardsData = [
     title: "Eco-Tourism and Sustainable Travel",
     description:
       "Learn about sustainable practices while exploring Rwanda’s natural wonders. Engage with projects aimed at conservation and community development.",
+  },
+  {
+    id: 13,
+    image: "./kivu-image/mountain-bike-1.jpg",
+    title: "Mountain Karongi Bike Full Day",
+    description:
+      "The Mountain Karongi Bike Adventure was a memorable 50 km journey through Rwanda’s Western Province, blending physical challenge, natural beauty, and cultural exploration.",
+  },
+  {
+    id: 14,
+    image: "./kivu-image/Dawn-dust-insect.jpg",
+    title: "The Dawn/Dusk Insects Experience",
+    description:
+      "The Dawn/Dusk Insects Experience around Lake Kivu offers a unique sensory journey into the natural world.",
+  },
+  {
+    id: 15,
+    image: "./kivu-image/swimming-cow-1.jpg",
+    title: "Swimming Cows Experience ",
+    description:
+      "The swimming cows of Mafundugu Island in Lake Kivu have become a captivating natural phenomenon.",
   },
 ];
 
@@ -138,6 +159,9 @@ const pageLinks ={
   "Learnmore-10": "details-pages/coffee-macadamia.html",
   "Learnmore-11": "details-pages/nyakiriba-swamp.html",
   "Learnmore-12": "details-pages/eco-tourism.html",
+  "Learnmore-13": "details-pages/karongi-mountain-full-day.html",
+  "Learnmore-14": "details-pages/the-dawn-dusk-Insects-experience.html",
+  "Learnmore-15": "details-pages/Swimming-Cows-Experience.html",
 };
 // Add event listeners to buttons
 document.querySelectorAll('[id^="Learnmore-"]').forEach(button => {
