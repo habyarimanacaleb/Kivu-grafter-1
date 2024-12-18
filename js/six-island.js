@@ -24,32 +24,9 @@ prevBtn.addEventListener("click", () => {
   updateSliderPosition();
 });
 
-document
-  .getElementById("testimonial-form")
-  .addEventListener("submit", function (event) {
-    event.preventDefault();
 
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const feedback = document.getElementById("feedback").value;
-    const clientsData = [];
 
-    if (name && email && feedback) {
-      alert("Thank you for your feedback!");
-      // Clear form after submission
-      this.reset();
 
-      //create card
-      const clientData = [name, feedback];
-
-      clientData.forEach((data) => {
-        clientsData.push(data);
-        console.log(clientsData)
-      });
-    } else {
-      alert("Please fill out all fields.");
-    }
-  });
 
 // Get the necessary elements
 const showFormBtn = document.querySelector("#showFormBtn");
