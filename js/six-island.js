@@ -1,4 +1,4 @@
-const sliderWrapper = document.getElementById("slider-wrapper");
+const sliderWrapper = document.querySelectorAll("#slider-wrapper");
 const prevBtn = document.getElementById("prev-btn");
 const nextBtn = document.getElementById("next-btn");
 

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Translate Setup</title>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <style>
+    /* Optional: Custom styling for the dropdown */
+    .goog-te-gadget {
+      font-size: 14px;
+    }
+    .goog-te-menu-value {
+      background-color: #f0f0f0;
+      padding: 5px;
+      border-radius: 4px;
+    }
+    .goog-te-gadget-simple {
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="translate-container flex flex-col items-start space-y-2 my-4">
+    <label for="google_translate_element" class="text-lg font-medium">Select Language:</label>
+    <div id="google_translate_element"></div>  <!-- Translation Dropdown will appear here -->
+  </div>
+    <section>hello its me</section>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',  // Default language
+        includedLanguages: 'en,fr,es,de,it,pt,ru',  // Languages to show in the dropdown
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE  // Simple dropdown layout
+      }, 'google_translate_element');
+    }
+  </script>
+
+</body>
+</html>

@@ -146,16 +146,14 @@ function createCards() {
       "transition-transform",
       "duration-300",
       "p-5",
-      "sm:w-full" // Ensure cards span the full width on small screens
-      // "md:w-1/3", // Two columns on medium screens
-      // "lg:w-1/3"  // Three columns on large screens
+      "sm:w-full"
     );
     cardElement.innerHTML = `
                 <img src="${card.image}" alt="${card.title}" class="text-center w-full object-cover" style="height:30vh;filter: brightness(1.2)">
                 <div class="p-5">
                     <h3 class="text-xl font-bold">${card.title}</h3>
                     <p class="text-gray-600 mt-2">${card.description}</p>
-                    <a href='pageLinks.Learnmore-${card.id}' id='Learnmore-${card.id}' class="text-blue-500 mt-6 inline-block rounded border-2 p-2 cursor-pointer hover:bg-blue-600 hover:text-white transition-colors duration-300">Learn More...</a>
+                    <a href='javascript:void(0)' id='Learnmore-${card.id}' class="text-blue-500 mt-6 inline-block rounded border-2 p-2 cursor-pointer hover:bg-blue-600 hover:text-white transition-colors duration-300">Learn More...</a>
                 </div>
             `;
     // Append the card to the container
@@ -212,3 +210,35 @@ document.getElementById("learnMoreBtn").addEventListener("click", () => {
     moreContent.classList.add("hidden");
   }
 });
+// translate our whole page
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',  // Default language
+    includedLanguages: 'en,fr,es,de,it,pt,ru',  // Languages to show in the dropdown
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE  // Simple dropdown layout
+  }, 'google_translate_element');
+}
+
+// Button click handler
+const buttonTranslate = document.querySelector('#translate-dropdown');
+const languages = document.querySelector('#google_translate_element');
+buttonTranslate.addEventListener('click', (event) => {
+  event.preventDefault();
+  // Toggle visibility of the language dropdown
+  languages.classList.toggle('active');
+});
+ // Detect when a language is selected
+ const observer = new MutationObserver(() => {
+  // Check if a new language is selected by monitoring changes in the dropdown's menu
+  const selectedLanguage = document.querySelector('.goog-te-menu-value');
+  if (selectedLanguage && selectedLanguage.innerText !== 'Select Language') {
+    // Close the dropdown after language selection
+    languages.classList.remove('active');
+  }
+});
+
+// Observe changes in the Google Translate element
+observer.observe(document.querySelector('#google_translate_element'), {
+  childList: true, 
+  subtree: true
+})
