@@ -1,4 +1,3 @@
-
 // Example data for the cards (you can fetch this data from an API or define it locally)
 const cardsData = [
   {
@@ -20,7 +19,7 @@ const cardsData = [
     image: "./kivu-image/night-fishing.jpg",
     title: "Night Fishing Experience",
     description:
-      "Experience Rwandan tradition with night fishing tours. Enjoy local songs while participating in or observing this cultural activity.",
+      "The Night Fishing Experience on Lake Kivu offers an unforgettable adventure, immersing participants in the traditional fishing practices of local Rwandan fishermen.",
   },
   {
     id: 4,
@@ -106,8 +105,28 @@ const cardsData = [
     description:
       "The swimming cows of Mafundugu Island in Lake Kivu have become a captivating natural phenomenon.",
   },
+  {
+    id: 16,
+    image: "./kivu-image/mountain-bike-2.jpg",
+    title: "Cit Tour Experience",
+    description:
+      "Embark on a biking and hiking adventure along the Kivu Belt Road, an immersive journey through Rwanda's stunning West Province.",
+  },
+  {
+    id: 17,
+    image: "./kivu-image/local-culture-2.jpg",
+    title: "Rwanda Culture And History",
+    description:
+      'Rwanda, often referred to as the "Land of a Thousand Hills," is a captivating destination offering a blend of breathtaking natural landscapes and rich cultural experiences.',
+  },
+  {
+    id: 18,
+    image: "./kivu-image/residential.jpg",
+    title: "Accomodation And Car Rentals In Kibuye Rwanda",
+    description:
+      "Nestled along the picturesque shores of Lake Kivu, Kibuye is a serene and captivating town in Rwanda's Western Province.",
+  },
 ];
-
 
 // Get the container where the cards will be inserted
 const container = document.querySelector(".service-container");
@@ -127,7 +146,7 @@ function createCards() {
       "transition-transform",
       "duration-300",
       "p-5",
-      "sm:w-full", // Ensure cards span the full width on small screens
+      "sm:w-full" // Ensure cards span the full width on small screens
       // "md:w-1/3", // Two columns on medium screens
       // "lg:w-1/3"  // Three columns on large screens
     );
@@ -136,7 +155,7 @@ function createCards() {
                 <div class="p-5">
                     <h3 class="text-xl font-bold">${card.title}</h3>
                     <p class="text-gray-600 mt-2">${card.description}</p>
-                    <a id='Learnmore-${card.id}' class="text-blue-500 mt-6 inline-block rounded border-2 p-2 cursor-pointer hover:bg-blue-600 hover:text-white transition-colors duration-300">Learn More...</a>
+                    <a href='pageLinks.Learnmore-${card.id}' id='Learnmore-${card.id}' class="text-blue-500 mt-6 inline-block rounded border-2 p-2 cursor-pointer hover:bg-blue-600 hover:text-white transition-colors duration-300">Learn More...</a>
                 </div>
             `;
     // Append the card to the container
@@ -146,7 +165,7 @@ function createCards() {
 // Call the function to create and insert cards into the DOM
 createCards();
 // Define the mapping of IDs to URLs
-const pageLinks ={
+const pageLinks = {
   "Learnmore-1": "details-pages/six-island.html",
   "Learnmore-2": "details-pages/kayaki.html",
   "Learnmore-3": "details-pages/night-fishing.html",
@@ -162,10 +181,14 @@ const pageLinks ={
   "Learnmore-13": "details-pages/karongi-mountain-full-day.html",
   "Learnmore-14": "details-pages/the-dawn-dusk-Insects-experience.html",
   "Learnmore-15": "details-pages/Swimming-Cows-Experience.html",
+  "Learnmore-16": "details-pages/city-tour-experience.html",
+  "Learnmore-17": "details-pages/Rwanda-Culture-And-History.html",
+  "Learnmore-18":
+    "details-pages/Accomodation-And-Car-Rentals-In-Kibuye-Rwanda.html",
 };
 // Add event listeners to buttons
-document.querySelectorAll('[id^="Learnmore-"]').forEach(button => {
-  button.addEventListener('click', function (event) {
+document.querySelectorAll('[id^="Learnmore-"]').forEach((button) => {
+  button.addEventListener("click", function (event) {
     event.preventDefault();
     const buttonId = button.id; // Get the button's ID
     const pageId = this.id; // Get the button's ID (e.g., "Learnmore-1")
@@ -174,7 +197,18 @@ document.querySelectorAll('[id^="Learnmore-"]').forEach(button => {
       window.location.href = targetPage; // Navigate to the URL
     } else {
       console.error("No page found for this button ID:", buttonId);
-      console.error('the page you navigated ha id of :',pageId)
+      console.error("the page you navigated ha id of :", pageId);
     }
   });
+});
+// about learn more
+document.getElementById("learnMoreBtn").addEventListener("click", () => {
+  const moreContent = document.getElementById("moreContent");
+  if (moreContent.classList.contains("hidden")) {
+    moreContent.classList.remove("hidden");
+    moreContent.classList.add("block");
+  } else {
+    moreContent.classList.remove("block");
+    moreContent.classList.add("hidden");
+  }
 });
