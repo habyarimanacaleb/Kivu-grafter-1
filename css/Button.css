@@ -72,29 +72,25 @@
 
 /* Lnguage translation */
 
-  .goog-te-gadget {
-    font-size: 14px;
-  }
-  .goog-te-menu-value {
-    background-color: #252121;
-    color: #ffffff;
-    font-family: Arial, serif;
-    padding: 5px;
-    border-radius: 4px;
-  }
-  .goog-te-gadget-simple {
-    border-radius: 4px;
-  }
-  /* Optional: Simple styling for visibility */
-  #google_translate_element {
-    display: none; /* Hidden by default */
-    margin-top: 10px;
-    padding: 10px;
-  }
+.language-translation {
+  position: relative;
+  display: inline-block;
+}
 
-  #google_translate_element.active {
-    display: block; /* Show when active */
-  }
-  .hidden{
-    display: none;
-  }
+.language-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  width: 200px;
+}
+
+.hidden {
+  display: none;
+}
+
+.active {
+  display: block;
+}

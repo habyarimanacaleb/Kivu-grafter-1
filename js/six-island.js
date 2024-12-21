@@ -6,7 +6,12 @@ let currentIndex = 0;
 
 // Get total number of slides
 const totalSlides = sliderWrapper.children.length;
-
+ if (!totalSlides) {
+  console.log('your Attempt to initialize the slider failed. No slides found.');
+    // Your slider initialization code here
+  } else {
+console.log('Slider initialized successfully');
+}
 // Update slider position
 function updateSliderPosition() {
   sliderWrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
