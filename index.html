@@ -43,8 +43,9 @@
             <li><a href="#contact">Contacts</a></li>
           </ul>
         </div>
+       <!-- Language Translation Section -->
         <div class="language-translation">
-          <button id="translate-dropdown" class="btn bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-500 transition"><i class="fa-solid fa-globe"></i> Language</button>
+          <button id="translate-dropdown" class="btn bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-500 transition">Translate</button>
           <div id="google_translate_element" class="language-dropdown hidden"></div>
         </div>
           <!-- end -->
@@ -177,5 +178,45 @@
     <script src="./js/six-island.js"></script>
     <script src="./js/app-menu.js"></script>
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-  </body>
+    <script type="text/javascript">
+       function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',  // Default language
+        includedLanguages: 'en,fr,es,de,it,pt,ru',  // Languages to show in the dropdown
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE  // Simple dropdown layout
+      }, 'google_translate_element');
+    }
+    document.addEventListener('DOMContentLoaded', function () {
+      const buttonTranslate = document.querySelector('#translate-dropdown');
+      const languages = document.querySelector('#google_translate_element');
+
+      if (buttonTranslate && languages) {
+        buttonTranslate.addEventListener('click', function (event) {
+          event.preventDefault();
+          // Toggle visibility of the language dropdown
+          languages.classList.toggle('hidden');
+          languages.classList.toggle('active');
+        });
+
+        // Detect when a language is selected
+        const observer = new MutationObserver(() => {
+          // Check if a new language is selected by monitoring changes in the dropdown's menu
+          const selectedLanguage = document.querySelector('.goog-te-menu-value span');
+          if (selectedLanguage && selectedLanguage.innerText !== 'Select Language') {
+            // Close the dropdown after language selection
+            languages.classList.remove('active');
+            languages.classList.add('hidden');
+          }
+        });
+         // Observe changes in the Google Translate element
+         observer.observe(languages, {
+          childList: true, 
+          subtree: true
+        });
+      } else {
+        console.error('Translate button or language dropdown element not found.');
+      }
+    });
+    </script>
+    </body>
 </html>

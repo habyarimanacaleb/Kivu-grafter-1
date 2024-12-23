@@ -87,6 +87,18 @@
   width: 200px;
 }
 
+.goog-te-gadget {
+    font-size: 14px;
+  }
+.goog-te-menu-value {
+    background-color: white;
+    padding: 5px;
+    border-radius: 4px;
+  }
+.goog-te-gadget-simple {
+    border-radius: 4px;
+  }
+
 .hidden {
   display: none;
 }

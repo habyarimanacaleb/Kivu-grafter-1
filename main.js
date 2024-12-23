@@ -210,35 +210,3 @@ document.getElementById("learnMoreBtn").addEventListener("click", () => {
     moreContent.classList.add("hidden");
   }
 });
-// translate our whole page
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({
-    pageLanguage: 'en',  // Default language
-    includedLanguages: 'en,fr,es,de,it,pt,ru',  // Languages to show in the dropdown
-    layout: google.translate.TranslateElement.InlineLayout.SIMPLE  // Simple dropdown layout
-  }, 'google_translate_element');
-}
-
-// Button click handler
-const buttonTranslate = document.querySelector('#translate-dropdown');
-const languages = document.querySelector('#google_translate_element');
-buttonTranslate.addEventListener('click', (event) => {
-  event.preventDefault();
-  // Toggle visibility of the language dropdown
-  languages.classList.toggle('active');
-});
- // Detect when a language is selected
- const observer = new MutationObserver(() => {
-  // Check if a new language is selected by monitoring changes in the dropdown's menu
-  const selectedLanguage = document.querySelector('.goog-te-menu-value');
-  if (selectedLanguage && selectedLanguage.innerText !== 'Select Language') {
-    // Close the dropdown after language selection
-    languages.classList.remove('active');
-  }
-});
-
-// Observe changes in the Google Translate element
-observer.observe(document.querySelector('#google_translate_element'), {
-  childList: true, 
-  subtree: true
-})
