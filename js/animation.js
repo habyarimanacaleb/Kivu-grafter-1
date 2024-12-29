@@ -22,3 +22,26 @@ document.querySelectorAll('nav a').forEach(anchor => {
         });
     });
 });
+
+//scrole content
+//
+// Get the button
+const scrollToTopButton = document.getElementById('scrollToTop');
+
+// Show/hide the button based on scroll position
+window.addEventListener('scroll', () => {
+  if (window.scrollY > window.innerHeight / 2) {
+    scrollToTopButton.classList.remove('hidden'); // Show the button
+  } else {
+    scrollToTopButton.classList.add('hidden'); // Hide the button
+  }
+});
+
+// Scroll to the top when the button is clicked
+scrollToTopButton.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
+});
+

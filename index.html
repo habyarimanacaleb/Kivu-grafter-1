@@ -40,7 +40,7 @@
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#service">Services</a></li>
-            <li><a href="#contact">Contacts</a></li>
+            <li><a href="#contactus">Contacts</a></li>
           </ul>
         </div>
        <!-- Language Translation Section -->
@@ -110,25 +110,43 @@
         <!-- Cards will be dynamically inserted here -->
       </div>
     </section>
-    <section class="contact-us" id="contact">
+    <div id="contactus" class="contact-us-by-this-button text-center py-6 bg-gray-100 rounded-lg shadow-md" role="article" aria-label="Contact Us Section">
+      <h1 class="text-3xl font-extrabold capitalize text-blue-800">
+        Need Assistance? <span class="text-blue-600">We’re Here to Help!</span>
+      </h1>
+      <p class="text-lg mt-3 text-gray-700">
+        Whether it’s a question, feedback, or just saying hello, we’re only one click away. Connect with our friendly support team for personalized assistance!
+      </p>
+      <button 
+        class="contact-us-btn bg-gradient-to-r from-blue-600 to-blue-400 text-white px-6 py-3 mt-5 rounded-lg hover:scale-105 hover:from-blue-700 hover:to-blue-500 transition-transform shadow-lg"
+        aria-label="Click to connect with our support team"
+        title="Reach Out to Us"
+      >
+        <i class="fa-solid fa-envelope mr-2"></i> Start Chat with Our Team
+      </button>
+      <p class="mt-4 text-gray-600 text-sm italic">
+        <i class="fa-solid fa-clock mr-2"></i> Our team is available Monday to Friday, 9 AM to 6 PM.
+      </p>
+    </div>
+    
+    <section class="contact-us hidden" id="contact">
         <div class="contact-form">
-           <h1 class="headings text-4xl text-bold-600 font-bold mb-10 py-10">Contact Us</h1>
-          <form class="mx-12" id="contact-form-data">
-              <div class="form-field">
-                <label for="name">Names</label>
-                <input type="text" name="name" id="name" placeholder="John Doe" required>
-              </div>
-              <div class="form-field">
-                <label for="email">Email</label>
-                <input type="text" name="email" id="email" placeholder="example@gmail.com" required>
-              </div>
-              <div class="form-field">
-                <label for="message">Meassage</label>
-                <textarea rows="8" cols="8" role="article" type="text" name="message" id="message" required placeholder="Querry..."></textarea>
-              </div>
-              <div class="form-field">
-                <button type="submit" id="submit-button" class="btn bg-blue-600 text-white px-4 py-2 ml-8 rounded-lg hover:bg-blue-500 transition" style="max-width: 100px;">Send</button>
-              </div>
+           <!-- <h1 class="headings text-4xl text-bold-600 font-bold mb-10 py-10">Contact Us</h1> -->
+
+          <form id="contactForm" class="bg-white p-6 rounded-lg shadow-md">
+            <div class="mb-4">
+              <label for="name" class="block text-gray-700 font-bold">Name (optional):</label>
+              <input type="text" id="name" name="name" class="w-full border border-gray-300 p-2 rounded">
+            </div>
+            <div class="mb-4">
+              <label for="email" class="block text-gray-700 font-bold">Email:</label>
+              <input type="email" id="email" name="email" class="w-full border border-gray-300 p-2 rounded" required>
+            </div>
+            <div class="mb-4">
+              <label for="message" class="block text-gray-700 font-bold">Message:</label>
+              <textarea id="message" name="message" class="w-full border border-gray-300 p-2 rounded" required></textarea>
+            </div>
+            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Send</button>
           </form>
       </div>
      </section>
@@ -139,44 +157,52 @@
       </div>
      </section>
         <!-- footer section -->
-     <footer class="app-footer bg-footer py-10">
-      <div class="footer-content container mx-auto px-6 flex flex-col lg:flex-row justify-between items-start">
-        <!-- Left Section - Company Info -->
-        <div class="footer-left mb-6 lg:mb-0">
-          <h3 class="footer-title text-2xl font-bold mb-3">Explore Lake Kivu Tours</h3>
-          <p class="footer-description text-lg">
-            Discover the best of Rwanda's natural beauty, from scenic boat tours to cultural immersions and adventurous hikes.
-          </p>
-        </div>
-        <!-- Middle Section - Useful Links -->
-        <div class="footer-middle mb-6 lg:mb-0">
-          <h3 class="footer-title text-2xl font-bold mb-3">Quick Links</h3>
-          <ul class="footer-links space-y-2">
-            <li><a href="#home" class="footer-link hover:text-blue-300">Home</a></li>
-            <li><a href="#about" class="footer-link hover:text-blue-300">About</a></li>
-            <li><a href="#services" class="footer-link hover:text-blue-300">Services</a></li>
-            <li><a href="#contact" class="footer-link hover:text-blue-300">Contact</a></li>
-            <li><a href="/privacy-policy" class="footer-link hover:text-blue-300">Privacy Policy</a></li>
-          </ul>
-        </div>
-        <!-- Right Section - Social Media Links -->
-        <div class="footer-right text-center lg:text-left">
-          <h3 class="footer-title text-2xl font-bold mb-3">Follow Us</h3>
-          <div class="footer-social flex justify-center lg:justify-start space-x-3">
-            <a href="https://facebook.com" class="social-icon text-2xl hover:text-blue-400"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://twitter.com" class="social-icon text-2xl hover:text-blue-400"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="https://instagram.com" class="social-icon text-2xl hover:text-blue-400"><i class="fa-brands fa-square-instagram"></i></a>
-            <a href="https://wa.me/250784606393" class="social-icon text-2xl hover:text-green-400"><i class="fa-brands fa-whatsapp"></i></a>
-            <a href="mailto:jeandamourrwibutso@gmail.com" class="social-icon text-2xl hover:text-red-400"><i class="fa-solid fa-envelope"></i></a>
+        <footer class="bg-blue-500 text-white py-10 relative">
+          <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
+              <!-- Company Info -->
+              <div class="footer-left">
+                <h3 class="text-2xl font-bold mb-3">Kivu Grafter</h3>
+                <p class="text-gray-300 text-sm leading-relaxed">
+                  Explore the best of Lake Kivu's natural beauty and cultural richness. From scenic tours to unique adventures, we bring you unforgettable experiences in Rwanda.
+                </p>
+                <a href="#contact" class="inline-block mt-4 text-blue-400 hover:text-blue-200">Contact Us</a>
+              </div>
+        
+              <!-- Contact Info -->
+              <div class="footer-right">
+                <h3 class="text-xl font-semibold mb-3">Get in Touch</h3>
+                <ul class="text-gray-300 space-y-2 text-sm">
+                  <li><i class="fa-solid fa-envelope mr-2"></i> info@laketour.com</li>
+                  <li><i class="fa-solid fa-phone mr-2"></i> +250 123 456 789</li>
+                  <li><i class="fa-solid fa-location-dot mr-2"></i> Kibuye, Rwanda</li>
+                </ul>
+                <div class="mt-4 flex space-x-4">
+                  <a href="https://facebook.com" class="hover:text-blue-200"><i class="fa-brands fa-facebook text-xl"></i></a>
+                  <a href="https://twitter.com" class="hover:text-blue-200"><i class="fa-brands fa-x-twitter text-xl"></i></a>
+                  <a href="https://instagram.com" class="hover:text-blue-200"><i class="fa-brands fa-instagram text-xl"></i></a>
+                </div>
+              </div>
+            </div>
+            <!-- Bottom Bar -->
+            <div class="mt-10 text-center border-t border-blue-600 pt-4 text-sm text-gray-400">
+              © 2024 Kivu Grafter. All rights reserved.
+            </div>
           </div>
-        </div>
-      </div>
-    </footer>
+        
+          <!-- Scroll to Top Button -->
+          <button id="scrollToTop" 
+            class="fixed bottom-10 right-6 hidden bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-500 transition">
+            <i class="fa-solid fa-chevron-up"></i>
+          </button>
+        </footer>
+        
     <script src="./main.js"></script>
     <script src="./js/animation.js"></script>
     <script src="./js/front-end-validation.js"></script>
     <script src="./js/six-island.js"></script>
     <script src="./js/app-menu.js"></script>
+    <script  src="./js/testimonials.js"></script>
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script type="text/javascript">
        function googleTranslateElementInit() {
@@ -217,6 +243,14 @@
         console.error('Translate button or language dropdown element not found.');
       }
     });
+
+    // Toggle Contact Us Section
+    const contactUsBtn = document.querySelector('.contact-us-btn');
+      const contactSection = document.getElementById('contact');
+
+      contactUsBtn.addEventListener('click', function () {
+        contactSection.classList.toggle('hidden');
+      });
     </script>
     </body>
 </html>

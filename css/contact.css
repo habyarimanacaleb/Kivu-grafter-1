@@ -1,8 +1,5 @@
 .contact-form{
     background-color: rgba(25, 199, 242, 0.6);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
     padding: 50px 20px;
     margin-right: auto;
     margin-left: auto;
@@ -18,7 +15,7 @@
     text-align: left;
     font-size: 18px;
     border-radius: 5px;
-    width: 500px;
+    width: 100%;
     border: none;
     outline: none;
     transition: border 3s ease;

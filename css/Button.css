@@ -106,3 +106,27 @@
 .active {
   display: block;
 }
+
+/* Scroll-to-Top Button Styles */
+#scrollToTop {
+  z-index: 100; /* Ensure it stays on top */
+  cursor: pointer;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+#scrollToTop i {
+  font-size: 1.5rem; /* Icon size */
+}
+
+/* Add fade-in animation for the button */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
