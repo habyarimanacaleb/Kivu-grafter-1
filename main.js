@@ -200,13 +200,19 @@ document.querySelectorAll('[id^="Learnmore-"]').forEach((button) => {
   });
 });
 // about learn more
-document.getElementById("learnMoreBtn").addEventListener("click", () => {
+const toggleButton = document.getElementById("Morecontent-Btn");
+const extraContent = document.getElementById("moreContent");
+
+toggleButton.addEventListener("click", () => {
   const moreContent = document.getElementById("moreContent");
   if (moreContent.classList.contains("hidden")) {
     moreContent.classList.remove("hidden");
     moreContent.classList.add("block");
+    toggleButton.textContent = "Show Less";
   } else {
     moreContent.classList.remove("block");
     moreContent.classList.add("hidden");
+    toggleButton.textContent = "Show More";
   }
 });
+

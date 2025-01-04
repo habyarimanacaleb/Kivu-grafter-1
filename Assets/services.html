@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-100 p-6">
+  <div class="max-w-4xl mx-auto">
+    <h1 class="text-3xl font-bold mb-6 text-center">Our Services</h1>
+    <div id="servicesContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    <p id="errorMessage" class="text-red-500 text-center mt-4 hidden"></p>
+  </div>
+
+  <script>
+    async function fetchServices() {
+      try {
+        const response = await fetch('http://localhost:3000/api/cards');
+
+        if (!response.ok) {
+          throw new Error('Failed to fetch services');
+        }
+
+        const services = await response.json();
+        const servicesContainer = document.getElementById('servicesContainer');
+
+        if (services.length === 0) {
+          servicesContainer.innerHTML = '<p class="text-gray-700 text-center">No services available yet.</p>';
+          return;
+        }
+
+        services.forEach(service => {
+          const serviceCard = document.createElement('div');
+          serviceCard.className = 'bg-white p-4 rounded-lg shadow-lg';
+
+          serviceCard.innerHTML = `
+            <img src="${service.imageUrl}" alt="${service.title}" class="w-full h-48 object-cover rounded mb-4">
+            <h2 class="text-xl font-bold">${service.title}</h2>
+            <p class="text-gray-700 mt-2">${service.description}</p>
+            <a href="${service.detailPage}" target="_blank" class="text-blue-500 mt-4 inline-block">View Details</a>
+          `;
+
+          servicesContainer.appendChild(serviceCard);
+        });
+      } catch (err) {
+        const errorMessage = document.getElementById('errorMessage');
+        errorMessage.innerText = 'Error: ' + err.message;
+        errorMessage.classList.remove('hidden');
+      }
+    }
+
+    // Fetch services when the page loads
+    fetchServices();
+  </script>
+</body>
+</html>

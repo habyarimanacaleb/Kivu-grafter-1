@@ -1,6 +1,5 @@
 /* General Button Styling */
 .btn {
-    /* display: inline-block; */
     padding: 10px 20px;
     font-size: 1rem;
     font-weight: 600;
@@ -18,7 +17,7 @@
 /* Hover Effect */
 .btn:hover {
     background-color: #0056b3; /* Darker Blue */
-    transform: translateY(-2px); /* Slight Lift */
+    transform: translateY(-1px); /* Slight Lift */
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Enhanced Shadow */
 }
 
