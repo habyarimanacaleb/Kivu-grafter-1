@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Dashboard</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
+    <style></style>
+  </head>
+  <body class="h-screen bg-gray-100">
+    <!-- Dashboard Container -->
+    <div class="flex h-screen">
+      <!-- Sidebar -->
+      <aside
+        class="w-64 bg-gradient-to-b from-blue-600 to-blue-500 text-white flex flex-col justify-between"
+      >
+        <!-- Sidebar Header -->
+        <div class="p-6">
+          <h1 class="text-2xl font-bold text-center">Admin Dashboard</h1>
+        </div>
+        <!-- Sidebar Menu -->
+        <nav class="flex-grow">
+          <ul class="space-y-6 p-4">
+            <li>
+              <button
+                class="w-full text-left px-4 py-2 rounded hover:bg-blue-500 transition flex items-center gap-3"
+                id="dashboardHomeBtn"
+              >
+                <i class="fa-solid fa-house"></i> Dashboard Home
+              </button>
+            </li>
+            <li>
+              <button
+                class="w-full text-left px-4 py-2 rounded hover:bg-blue-500 transition flex items-center gap-3"
+                id="manageServicesBtn"
+              >
+                <i class="fa-solid fa-cogs"></i> Manage Services
+              </button>
+            </li>
+            <li>
+              <button
+                class="w-full text-left px-4 py-2 rounded hover:bg-blue-500 transition flex items-center gap-3"
+                id="usersBtn"
+              >
+                <i class="fa-solid fa-users"></i> View Users
+              </button>
+            </li>
+            <li>
+              <button
+                class="w-full text-left px-4 py-2 rounded hover:bg-blue-500 transition flex items-center gap-3"
+                id="testimonialsBtn"
+              >
+                <i class="fa-solid fa-comments"></i> Manage Testimonials
+              </button>
+            </li>
+            <li>
+              <button
+                class="w-full text-left px-4 py-2 rounded hover:bg-blue-500 transition flex items-center gap-3"
+                id="reviewsBtn"
+              >
+                <i class="fa-solid fa-star"></i> View Reviews
+              </button>
+            </li>
+            <li>
+              <button
+                class="w-full text-left px-4 py-2 rounded hover:bg-blue-500 transition flex items-center gap-3"
+                id="queriesBtn"
+              >
+                <i class="fa-solid fa-envelope-open-text"></i> Contact Queries
+              </button>
+            </li>
+          </ul>
+        </nav>
+        <!-- Sidebar Footer -->
+        <div class="p-6 bg-blue-700">
+          <button
+            class="w-full text-left px-4 py-2 rounded hover:bg-blue-500 transition flex items-center gap-3"
+          id="logoutBtn"
+            >
+            <i class="fa-solid fa-sign-out-alt"></i> Logout
+          </button>
+        </div>
+      </aside>
+      <!-- Main Content -->
+      <main class="flex-grow flex flex-col justify-between p-8">
+        <!-- Section: Dashboard Home -->
+        <section
+          id="dashboardHome"
+          class="hidden flex-grow flex flex-col items-center justify-center"
+        >
+          <h2 class="text-3xl font-bold text-blue-600 mb-6">
+            Welcome to Admin Dashboard
+          </h2>
+          <p class="text-gray-600">
+            Use the sidebar to navigate through different functionalities.
+          </p>
+        </section>
+        <!-- Section: Manage Services -->
+        <section id="manageServices" class="hidden flex-grow flex flex-col">
+          <h2 class="text-3xl font-bold text-blue-600 mb-6">Manage Services</h2>
+          <button
+            id="createServicePageBtn"
+            class="bg-green-500 text-white px-6 py-3 rounded hover:bg-green-600 transition mb-6"
+          >
+            Create New Service
+          </button>
+          <div class="bg-white rounded-lg shadow p-6">
+            <h3 class="text-lg font-semibold text-gray-700 mb-3">
+              Services List
+            </h3>
+            <p class="text-gray-500">
+              List of services will be displayed here...
+            </p>
+          </div>
+        </section>
+        <!-- Section: View Users -->
+        <section id="viewUsers" class="hidden flex-grow flex flex-col">
+          <h2 class="text-3xl font-bold text-blue-600 mb-6">View Users</h2>
+          <div class="bg-white rounded-lg shadow p-6">
+            <h3 class="text-lg font-semibold text-gray-700 mb-3">
+              Registered Users
+            </h3>
+            <p class="text-gray-500">
+              List of registered users will be displayed here...
+            </p>
+          </div>
+        </section>
+        <!-- Section: Manage Testimonials -->
+        <section id="manageTestimonials" class="hidden flex-grow flex flex-col">
+          <h2 class="text-3xl font-bold text-blue-600 mb-6">
+            Manage Testimonials
+          </h2>
+          <div class="bg-white rounded-lg shadow p-6">
+            <h3 class="text-lg font-semibold text-gray-700 mb-3">
+              User Testimonials
+            </h3>
+            <p class="text-gray-500">Testimonials management interface...</p>
+          </div>
+        </section>
+        <!-- Section: View Reviews -->
+        <section id="viewReviews" class="hidden flex-grow flex flex-col">
+          <h2 class="text-3xl font-bold text-blue-600 mb-6">View Reviews</h2>
+          <div class="bg-white rounded-lg shadow p-6">
+            <h3 class="text-lg font-semibold text-gray-700 mb-3">
+              User Reviews
+            </h3>
+            <p class="text-gray-500">Reviews data will be displayed here...</p>
+          </div>
+        </section>
+        <!-- Section: Contact Queries -->
+        <section id="contactQueries" class="hidden flex-grow flex flex-col">
+          <h2 class="text-3xl font-bold text-blue-600 mb-6">Contact Queries</h2>
+          <div class="bg-white rounded-lg shadow p-6">
+            <h3 class="text-lg font-semibold text-gray-700 mb-3">
+              Contact Messages
+            </h3>
+            <p class="text-gray-500">Contact queries and messages...</p>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script>
+      // JavaScript logic for toggling sections
+      const sections = document.querySelectorAll("main section");
+      const sidebarButtons = document.querySelectorAll("aside button");
+      sidebarButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          sections.forEach((section) => section.classList.add("hidden"));
+          const targetSection = document.getElementById(
+            button.id.replace("Btn", "")
+          );
+          if (targetSection) targetSection.classList.remove("hidden");
+        });
+      });
+
+      // Select sidebar buttons and main content sections
+      const dashboardHomeBtn = document.getElementById("dashboardHomeBtn");
+      const manageServicesBtn = document.getElementById("manageServicesBtn");
+      const usersBtn = document.getElementById("usersBtn");
+      const testimonialsBtn = document.getElementById("testimonialsBtn");
+      const reviewsBtn = document.getElementById("reviewsBtn");
+      const queriesBtn = document.getElementById("queriesBtn");
+      const logoutBtn = document.getElementById("logoutBtn");
+
+      // Sections
+      const dashboardHomeSection = document.getElementById("dashboardHome");
+      const manageServicesSection = document.getElementById("manageServices");
+      const viewUsersSection = document.getElementById("viewUsers");
+      const manageTestimonialsSection =
+        document.getElementById("manageTestimonials");
+      const viewReviewsSection = document.getElementById("viewReviews");
+      const contactQueriesSection = document.getElementById("contactQueries");
+
+    //   Utility to hide all sections
+      const hideAllSections = () => {
+        const sections = [
+          dashboardHomeSection,
+          manageServicesSection,
+          viewUsersSection,
+          manageTestimonialsSection,
+          viewReviewsSection,
+          contactQueriesSection,
+        ];
+
+        sections.forEach((section) => {
+          section.classList.add('hidden');
+        });
+      };
+
+      // Event Listeners for Sidebar Buttons
+      dashboardHomeBtn.addEventListener("click", () => {
+          hideAllSections();
+        dashboardHomeSection.classList.remove("hidden");
+      });
+
+      manageServicesBtn.addEventListener("click", () => {
+          hideAllSections();
+        manageServicesSection.classList.remove("hidden");
+      });
+
+      usersBtn.addEventListener("click", () => {
+          hideAllSections();
+        viewUsersSection.classList.remove("hidden");
+      });
+
+      testimonialsBtn.addEventListener("click", () => {
+          hideAllSections();
+        manageTestimonialsSection.classList.remove("hidden");
+      });
+
+      reviewsBtn.addEventListener("click", () => {
+          hideAllSections();
+        viewReviewsSection.classList.remove("hidden");
+      });
+
+      queriesBtn.addEventListener("click", () => {
+          hideAllSections();
+        contactQueriesSection.classList.remove("hidden");
+      });
+
+      // Logout Button Functionality
+      logoutBtn.addEventListener("click", () => {
+        if (confirm("Are you sure you want to logout?")) {
+          // Replace this with actual logout functionality
+          alert("Logged out successfully!");
+          window.location.href = "/index.html";
+        }
+      });
+
+      // Show Dashboard Home by default on page load
+      hideAllSections();
+      dashboardHomeSection.classList.remove("hidden");
+    </script>
+    <!-- <script type="text/javascript" src="/dashboard.js"></script> -->
+  </body>
+</html>
