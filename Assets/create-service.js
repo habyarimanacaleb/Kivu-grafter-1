@@ -1,19 +1,31 @@
 // Fetch cards data from the backend
 async function fetchCards() {
-    try {
-      const response = await fetch('/api/cards');
-      const cardsData = await response.json();
-      createCards(cardsData);
-    } catch (error) {
-      console.error('Error fetching cards:', error);
+  try{
+    const response = await fetch("http://localhost:3000/api/cards");
+
+    if (!response.ok) {
+      throw new Error("Failed to fetch services");
     }
+  
+    const services = await response.json();
+    const container = document.querySelector('.service-container');
+    if (services.length === 0) {
+      container.innerHTML =
+        '<p class="text-gray-700 text-center">No services available yet.</p>';
+      return;
+  }
+
+  } catch (err) {
+    const errorMessage = document.getElementById("errorMessage");
+    errorMessage.innerText = "Error: " + err.message;
+    errorMessage.classList.remove("hidden");
+  }
   }
   
   // Function to create and display cards
   function createCards(cardsData) {
     const container = document.querySelector('.service-container');
-    container.innerHTML = ''; // Clear existing cards
-    cardsData.forEach((card) => {
+       cardsData.forEach((card) => {
       const cardElement = document.createElement('div');
       cardElement.classList.add(
         'card',

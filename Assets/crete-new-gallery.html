@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create New Service</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-100 p-6">
+  <div class="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-lg">
+    <h1 class="text-2xl font-bold mb-4">Create New Photo Card</h1>
+    <form id="galleryForm" enctype="multipart/form-data">
+      <div class="mb-4">
+        <label for="imageFile" class="block text-gray-700 font-bold">Image:</label>
+        <input type="file" name="imageFile" id="imageFile" class="w-full border border-gray-300 p-2 rounded" required>
+      </div>
+      <div class="mb-4">
+        <label for="title" class="block text-gray-700 font-bold">Title:</label>
+        <input type="text" name="title" id="title" placeholder="Title" class="w-full border border-gray-300 p-2 rounded" required>
+      </div>
+      <div class="mb-4">
+        <label for="description" class="block text-gray-700 font-bold">Description:</label>
+        <textarea name="description" id="description" placeholder="Description" class="w-full border border-gray-300 p-2 rounded" required></textarea>
+      </div>
+      <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Create Card</button>
+    </form>
+    <p id="responseMessage" class="mt-4 text-green-600 font-bold hidden"></p>
+  </div>
+
+  <script>
+    document.getElementById('galleryForm').addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      const form = document.getElementById('galleryForm');
+      const formData = new FormData(form);
+
+      try {
+        const response = await fetch('http://localhost:3000/api/gallery', {
+          method: 'POST',
+          body: formData,
+        });
+
+        if (response.ok) {
+          const result = await response.json();
+          const responseMessage = document.getElementById('responseMessage');
+          responseMessage.innerText = 'Photo created successfully!';
+          responseMessage.classList.remove('hidden');
+          responseMessage.classList.add('text-green-600');
+          console.log('Success:', result);
+        } else {
+          const error = await response.json();
+          const responseMessage = document.getElementById('responseMessage');
+          responseMessage.innerText = 'Error: ' + error.message;
+          responseMessage.classList.remove('hidden');
+          responseMessage.classList.add('text-red-600');
+          console.error('Error:', error);
+        }
+      } catch (err) {
+        const responseMessage = document.getElementById('responseMessage');
+        responseMessage.innerText = 'Error: Failed to submit data';
+        responseMessage.classList.remove('hidden');
+        responseMessage.classList.add('text-red-600');
+        console.error('Error:', err);
+      }
+    });
+  </script>
+</body>
+</html>
