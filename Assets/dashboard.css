@@ -1,0 +1,72 @@
+/* General Slider Styles */
+#contactSlider {
+    display: flex; /* Enables horizontal layout for slides */
+    transition: transform 0.5s ease-in-out; /* Smooth slide animation */
+    width: 100%; /* Ensures full-width slider */
+    overflow: hidden; /* Hides overflowing content */
+    height: 20vh; /* Limits height to 60% of viewport */
+  }
+  
+  #contactSlider > div {
+    flex: 0 0 100%; /* Each slide takes 100% of the width */
+    text-align: center; /* Centers text in the slides */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds depth to slides */
+    background-color: #f9f9f9; /* Light background for contrast */
+    border-radius: 10px; /* Rounds corners for aesthetic */
+  }
+  
+  /* Navigation Buttons */
+  #prevSlide,
+  #nextSlide {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Centers vertically */
+    background-color: #0078d4; /* Tailwind's bg-blue-600 */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: background-color 0.3s ease;
+  }
+  
+  #prevSlide {
+    left: 10px; /* Aligns left navigation button */
+  }
+  
+  #nextSlide {
+    right: 10px; /* Aligns right navigation button */
+  }
+  
+  #prevSlide:hover,
+  #nextSlide:hover {
+    background-color: #0056a3; /* Darker blue on hover */
+  }
+  
+  /* Error Message Styling */
+  .text-red-500 {
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 20px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    #contactSlider > div {
+      font-size: 0.9rem; /* Adjusts text size for smaller screens */
+      padding: 10px;
+    }
+  
+    #prevSlide,
+    #nextSlide {
+      width: 30px;
+      height: 30px; /* Reduces button size on smaller screens */
+    }
+  }
+  

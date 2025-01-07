@@ -16,49 +16,49 @@ const viewReviewsSection = document.getElementById('viewReviews');
 const contactQueriesSection = document.getElementById('contactQueries');
 
 // Utility to hide all sections
-// const hideAllSections = () => {
-//   const sections = [
-//     dashboardHomeSection,
-//     manageServicesSection,
-//     viewUsersSection,
-//     manageTestimonialsSection,
-//     viewReviewsSection,
-//     contactQueriesSection,
-//   ];
+const hideAllSections = () => {
+  const sections = [
+    dashboardHomeSection,
+    manageServicesSection,
+    viewUsersSection,
+    manageTestimonialsSection,
+    viewReviewsSection,
+    contactQueriesSection,
+  ];
   
-//   sections.forEach((section) => {
-//     section.classList.add('hidden');
-//   });
-// };
+  sections.forEach((section) => {
+    section.classList.add('hidden');
+  });
+};
 
 // Event Listeners for Sidebar Buttons
 dashboardHomeBtn.addEventListener('click', () => {
-//   hideAllSections();
+  hideAllSections();
   dashboardHomeSection.classList.remove('hidden');
 });
 
 manageServicesBtn.addEventListener('click', () => {
-//   hideAllSections();
+  hideAllSections();
   manageServicesSection.classList.remove('hidden');
 });
 
 usersBtn.addEventListener('click', () => {
-//   hideAllSections();
+  hideAllSections();
   viewUsersSection.classList.remove('hidden');
 });
 
 testimonialsBtn.addEventListener('click', () => {
-//   hideAllSections();
+  hideAllSections();
   manageTestimonialsSection.classList.remove('hidden');
 });
 
 reviewsBtn.addEventListener('click', () => {
-//   hideAllSections();
+  hideAllSections();
   viewReviewsSection.classList.remove('hidden');
 });
 
 queriesBtn.addEventListener('click', () => {
-//   hideAllSections();
+  hideAllSections();
   contactQueriesSection.classList.remove('hidden');
 });
 
