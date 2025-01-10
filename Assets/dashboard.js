@@ -73,3 +73,9 @@ logoutBtn.addEventListener('click', () => {
 // Show Dashboard Home by default on page load
 hideAllSections();
 dashboardHomeSection.classList.remove('hidden');
+
+//create new services
+document.getElementById('createServicePageBtn').addEventListener('click', async (e) => {
+e.preventDefault();
+  window.location.href = '/Assets/create-new-service.html';
+});

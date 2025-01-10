@@ -39,7 +39,7 @@
       const formData = new FormData(form);
 
       try {
-        const response = await fetch('http://localhost:3000/api/cards', {
+        const response = await fetch('http://localhost:3001/api/cards', {
           method: 'POST',
           body: formData,
         });
@@ -51,6 +51,7 @@
           responseMessage.classList.remove('hidden');
           responseMessage.classList.add('text-green-600');
           console.log('Success:', result);
+          window.location.href = '/Assets/dashboard.html';
         } else {
           const error = await response.json();
           const responseMessage = document.getElementById('responseMessage');
