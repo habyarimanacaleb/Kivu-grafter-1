@@ -15,7 +15,7 @@
   <script>
     async function fetchGallery() {
       try {
-          const response = await fetch('http://localhost:3000/api/gallery');
+          const response = await fetch('https://kivu-back-end.onrender.com/api/gallery');
           const gallery = await response.json();
           const galleryDiv = document.getElementById('gallery');
         if (gallery.length === 0) {
