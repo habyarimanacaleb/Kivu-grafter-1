@@ -199,6 +199,21 @@
           window.location.href = "/index.html";
         }
       });
+
+      
+      //logout
+  document.getElementById('logoutButton').addEventListener('click', async () => {
+  const response = await fetch('/api/ibirwa-clients/logout', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  });
+  const result = await response.json();
+  alert(result.message);
+  // Remove the token from localStorage
+  localStorage.removeItem('token');
+});
     </script>
   </body>
 </html>
