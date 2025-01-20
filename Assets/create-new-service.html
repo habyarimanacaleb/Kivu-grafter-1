@@ -39,7 +39,7 @@
       const formData = new FormData(form);
 
       try {
-        const response = await fetch('http://localhost:3001/api/cards', {
+        const response = await fetch('https://kivu-back-end.onrender.com/api/cards', {
           method: 'POST',
           body: formData,
         });
