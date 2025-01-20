@@ -200,9 +200,10 @@
   });
 
   const result = await response.json();
-  alert(result.message);
-  // Remove the token from localStorage
-  localStorage.removeItem('token');
+    alert(result.message);
+    // Remove the token from localStorage
+    localStorage.removeItem('token');
+    window.location.href = '/login.html';
 });
      </script>
   </body>
