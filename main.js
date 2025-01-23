@@ -133,6 +133,13 @@ const cardsData = [
     description:
       'The "Bridge – Mount Jali" fitness journey is an exhilarating mountain bike ride that challenges cyclists with its scenic routes and demanding terrain.',
   },
+  {
+    id: 20,
+    image: "./kivu-image/Mountain-biking-in-Musanze.jpg",
+    title: "MOUNTAIN BIKE ADVENTURES IN VOLCANO'S REGION",
+    description:
+      "Musanze, located in the northern part of Rwanda, is an adventurer's paradise, renowned for its breathtaking landscapes and a range of mountain biking trails.",
+  },
 ];
 
 // Get the container where the cards will be inserted
@@ -191,6 +198,8 @@ const pageLinks = {
   "Learnmore-18":
     "details-pages/Accomodation-And-Car-Rentals-In-Kibuye-Rwanda.html",
   "Learnmore-19":
+    "details-pages/mount-jar-from-sout-loops-from-kibagabaga-tail.html",
+  "Learnmore-20":
     "details-pages/mountain-bike-adventure-in-the-volcanoes-region-of-rwanda.html",
 };
 // Add event listeners to buttons
