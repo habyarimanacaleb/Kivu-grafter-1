@@ -126,6 +126,13 @@ const cardsData = [
     description:
       "Nestled along the picturesque shores of Lake Kivu, Kibuye is a serene and captivating town in Rwanda's Western Province.",
   },
+  {
+    id: 19,
+    image: "./kivu-image/Bridge-Mount-Jali.jpg",
+    title: "Bridge – Mount Jali To Kibagabaga Trail",
+    description:
+      'The "Bridge – Mount Jali" fitness journey is an exhilarating mountain bike ride that challenges cyclists with its scenic routes and demanding terrain.',
+  },
 ];
 
 // Get the container where the cards will be inserted
@@ -183,6 +190,8 @@ const pageLinks = {
   "Learnmore-17": "details-pages/Rwanda-Culture-And-History.html",
   "Learnmore-18":
     "details-pages/Accomodation-And-Car-Rentals-In-Kibuye-Rwanda.html",
+  "Learnmore-19":
+    "details-pages/mountain-bike-adventure-in-the-volcanoes-region-of-rwanda.html",
 };
 // Add event listeners to buttons
 document.querySelectorAll('[id^="Learnmore-"]').forEach((button) => {
@@ -215,4 +224,3 @@ toggleButton.addEventListener("click", () => {
     toggleButton.textContent = "Show More";
   }
 });
-
