@@ -28,10 +28,17 @@
         text-align: justify;
       }
 
-      @media screen and (min-width: 768px) {
-        p,
-        li {
+      @media screen and (max-width: 768px) {
+        h3 {
+          font-size: 1rem;
+        }
+
+        li,
+        p {
           font-size: 0.8rem;
+        }
+        li {
+          list-style-type: none;
         }
       }
     </style>
